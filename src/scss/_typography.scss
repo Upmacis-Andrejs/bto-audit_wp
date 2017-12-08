@@ -1,0 +1,174 @@
+//FONTS
+ @font-face {
+  font-family: icon;
+  src: url(../fonts/icomoon.eot); /* IE9 Compat Modes */
+    src: url(../fonts/icomoon.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+       url(../fonts/icomoon.woff) format('woff'), /* Pretty Modern Browsers */
+       url(../fonts/icomoon.ttf)  format('truetype'), /* Safari, Android, iOS */
+       url(../fonts/icomoon.svg) format('svg'); /* Legacy iOS */
+} 
+
+.Source-Sans-Pro-Regular {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400; 
+  font-style: normal;  
+}
+.Source-Sans-Pro-Bold {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700; 
+  font-style: normal;  
+}
+p, .p {
+  @extend .Source-Sans-Pro-Regular;
+  font-size: 17px;
+  letter-spacing: 0.01em;
+  color: #9097a4;
+}
+h5, .h5 {
+  @extend .Source-Sans-Pro-Regular;
+  font-size: 11px;
+  letter-spacing: 0.01em;  
+}
+h4, .h4 {
+  @extend .Source-Sans-Pro-Regular;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+h3, .h3 {
+  @extend .Source-Sans-Pro-Regular;
+  font-size: 17px;
+  letter-spacing: 0.01em;
+}
+.h3-small {
+  @extend .Source-Sans-Pro-Regular;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+}
+h2, .h2 {
+  @extend .Source-Sans-Pro-Bold;
+  font-size: 17px;
+  letter-spacing: 0.01em;
+}
+h1, .h1 {
+  @extend .Source-Sans-Pro-Regular;
+  font-size: 26px;
+  letter-spacing: 0.01em;
+}
+.h1-l {
+  @extend .Source-Sans-Pro-Regular;
+  font-size: 28px;
+  letter-spacing: 0.01em;
+}
+.h1-huge {
+  @extend .Source-Sans-Pro-Bold;
+  font-size: 250px;
+  letter-spacing: 0.01em;  
+}
+
+[class^="i-"],
+[class*="i-"] {
+  font-family: 'icon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+    /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?9b9jp8');
+  src:  url('fonts/icomoon.eot?9b9jp8#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?9b9jp8') format('truetype'),
+    url('fonts/icomoon.woff?9b9jp8') format('woff'),
+    url('fonts/icomoon.svg?9b9jp8#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.i-add:before {
+  content: "\e900";
+}
+.i-arrow-down:before {
+  content: "\e901";
+}
+.i-arrow-right:before {
+  content: "\e902";
+}
+.i-bg-dark-blue:before {
+  content: "\e903";
+  color: #364156;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.i-bg-light-blue:before {
+  content: "\e904";
+  color: #c7d3dd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;  
+}
+.i-bg-lightest:before {
+  content: "\e905";
+  color: #e9edf1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;  
+}
+.i-check:before {
+  content: "\e906";
+}
+.i-clear:before {
+  content: "\e907";
+}
+.i-close:before {
+  content: "\e908";
+}
+.i-delete:before {
+  content: "\e909";
+}
+.i-fb:before {
+  content: "\e90a";
+}
+.i-google-plus:before {
+  content: "\e90b";
+}
+.i-grid:before {
+  content: "\e90c";
+}
+.i-list:before {
+  content: "\e90d";
+}
+.i-print:before {
+  content: "\e90e";
+}
+.i-show:before {
+  content: "\e90f";
+}
+.i-twitter:before {
+  content: "\e910";
+}
+.i-vk:before {
+  content: "\e911";
+}
+
+//END OF FONTS

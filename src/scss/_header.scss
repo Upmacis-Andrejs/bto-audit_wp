@@ -1,0 +1,26 @@
+#empty {}
+#site-header { background-color: #e4d6d3; }
+
+.header-logo > a {
+	width: 150px;
+	height: 83px;
+}
+.header-menu {
+	list-style-type: none;
+	a,
+	a:hover,
+	a:active,
+	a:focus,
+	a:visited {
+		text-decoration: none;
+	}
+	.sub-menu {
+		display: none;
+		list-style-type: none;
+	}
+	.menu-item-has-children:hover > .sub-menu,
+	.menu-item-has-children:active > .sub-menu {
+		display: block;
+	}
+}
+.header-menu > li { float: left; }
