@@ -36,13 +36,13 @@
 							// check current row layout
 					        if( get_row_layout() == 'text_block_with_button' ): ?>
 					        <div class="custom-field-group" style="
-								<?php if( get_field('') == '' ): 
-										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
-									elseif ( get_field('') == '' ): 
-										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
-									?
-										echo ' '
-									?>				
+								<?php if( get_sub_field('tbwb-bg_color') == 'green' ): 
+										echo 'background-image: linear-gradient( 63deg, #001220, #126384 );';
+									elseif ( get_sub_field('tbwb-bg_color') == 'gray' ): 
+										echo 'background-image: linear-gradient( 63deg, #1a191f, #939c92 );';
+									else :
+										echo ' ';
+									endif; ?>			
 							">
 								<div class="container">
 									<div class="row">					        
@@ -70,12 +70,12 @@
 		    						while ( have_rows('teammate') ) : the_row(); ?>
 		    						<div class="custom-field-group" style="
 										<?php if( get_field('') == '' ): 
-												echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
+												echo 'background-image: linear-gradient( 45deg, red, #f06d06 );';
 											elseif ( get_field('') == '' ): 
-												echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
-											?
-												echo ' '
-											?>				
+												echo 'background-image: linear-gradient( 45deg, red, #f06d06 );';
+											else :;
+												echo ' ';
+											endif; ?>				
 									">
 										<div class="container">
 											<div class="row">
@@ -121,12 +121,12 @@
 		    				elseif ( get_row_layout() == 'text_block_2_columns' ): ?>
 		    				<div class="custom-field-group" style="
 								<?php if( get_field('') == '' ): 
-										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
+										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );';
 									elseif ( get_field('') == '' ): 
-										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
-									?
-										echo ' '
-									?>				
+										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );';
+									else :;
+										echo ' ';
+									endif; ?>				
 							">
 								<div class="container">
 									<div class="row">		    				
@@ -150,12 +150,12 @@
 		    						while ( have_rows('teammate') ) : the_row(); ?>
 		    						<div class="custom-field-group" style="
 										<?php if( get_field('') == '' ): 
-												echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
+												echo 'background-image: linear-gradient( 45deg, red, #f06d06 );';
 											elseif ( get_field('') == '' ): 
-												echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
-											?
-												echo ' '
-											?>				
+												echo 'background-image: linear-gradient( 45deg, red, #f06d06 );';
+											else :
+												echo ' ';
+											endif; ?>				
 									">
 										<div class="container">
 											<div class="row">		    						
@@ -181,12 +181,12 @@
 		    				elseif ( get_row_layout() == 'contact_form' ): ?>
 		    				<div class="custom-field-group" style="
 								<?php if( get_field('') == '' ): 
-										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
+										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );';
 									elseif ( get_field('') == '' ): 
-										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
-									?
-										echo ' '
-									?>				
+										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );';
+									else :
+										echo ' ';
+									endif; ?>				
 							">
 								<div class="container">
 									<div class="row">		    				
@@ -202,12 +202,12 @@
 		    				<?php elseif ( get_row_layout() == 'imprint' ): ?>
 		    				<div class="custom-field-group" style="
 								<?php if( get_field('') == '' ): 
-										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
+										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );';
 									elseif ( get_field('') == '' ): 
-										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
-									?
-										echo ' '
-									?>				
+										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );';
+									else :
+										echo ' ';
+									endif; ?>				
 							">
 								<div class="container">
 									<div class="row">		    						    					
@@ -227,12 +227,12 @@
 				    		<?php elseif ( get_row_layout() == 'full_width_image' ): ?>
 				    		<div class="custom-field-group" style="
 								<?php if( get_field('') == '' ): 
-										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
+										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );';
 									elseif ( get_field('') == '' ): 
-										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
-									?
-										echo ' '
-									?>				
+										echo 'background-image: linear-gradient( 45deg, red, #f06d06 );';
+									else :
+										echo ' ';
+									endif; ?>				
 							">
 								<div class="container">
 									<div class="row">		    				
@@ -252,12 +252,12 @@
 		    						while ( have_rows('logo_block') ) : the_row(); ?>
 		    						<div class="custom-field-group" style="
 										<?php if( get_field('') == '' ): 
-												echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
+												echo 'background-image: linear-gradient( 45deg, red, #f06d06 );';
 											elseif ( get_field('') == '' ): 
-												echo 'background-image: linear-gradient( 45deg, red, #f06d06 );'
-											?
-												echo ' '
-											?>				
+												echo 'background-image: linear-gradient( 45deg, red, #f06d06 );';
+											else :
+												echo ' ';
+											endif; ?>				
 									">
 										<div class="container">
 											<div class="row">
