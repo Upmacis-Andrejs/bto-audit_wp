@@ -27,19 +27,16 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    //add_image_size('large', 700, '', true); // Large Thumbnail
-    //add_image_size('medium', 250, '', true); // Medium Thumbnail
-    //add_image_size('small', 120, '', true); // Small Thumbnail
     //add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
     // Add Custom Logo Theme Support
-    //add_theme_support('custom-logo');
-    //
-    //function my_custom_logo() {
-    //    if ( function_exists('the_custom_logo')) {
-    //        the_custom_logo();
-    //    }
-    //}
+    add_theme_support('custom-logo');
+    
+    function my_custom_logo() {
+        if ( function_exists('the_custom_logo')) {
+            the_custom_logo();
+        }
+    }
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
@@ -101,6 +98,20 @@ function remove_admin_bar_nodes( $wp_admin_bar ) {
     $wp_admin_bar->remove_node( 'new-content' );    
 }
 add_action('admin_bar_menu','remove_admin_bar_nodes',999);
+
+// Remove Desired Customizer Panels
+function remove_customizer_panels() {     
+	global $wp_customize;
+	$wp_customize->remove_panel( 'widgets' ); 
+} 
+
+add_action( 'customize_register', 'remove_customizer_panels', 11 );
+
+// Move Yoast plugin SEO boxes to bottom of post/page admin area
+function yoast_to_bottom() {
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoast_to_bottom' );
 
 // Wrap the content typed in WP visual editor in extra <div>
 function wrap_editor_content($content) {
