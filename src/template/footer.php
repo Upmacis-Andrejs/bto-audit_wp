@@ -1,14 +1,12 @@
 			<!-- footer -->
-			<footer class="footer" id="site-footer" role="contentinfo">
+			<footer class="footer flex-vert-c" id="site-footer" role="contentinfo" style="background-image: linear-gradient( 63deg, #001220, #126384 );">
 				<div class="container">
 					<div class="row">
-
 						<!-- copyright -->
 						<p class="copyright">
 							<?php _e('&copy;&nbsp;BTO Audit AG', 'btoaudit'); ?>
 						</p>
 						<!-- /copyright -->
-
 					</div>
 				</div>
 			</footer>

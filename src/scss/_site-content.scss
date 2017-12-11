@@ -1,1 +1,127 @@
-main { background-color: orange; }
+// Section Title Block
+.section-title-block {
+	height: 72px;
+	color: #fff;
+	background-image: linear-gradient( 63deg, #08161f, #0d5b88 );
+}
+
+// Text Block With Button Block
+.text-block-with-button {
+	padding-top: 120px; // ???
+	padding-bottom: 120px;
+	.tbwb-text {
+		max-width: 685px;
+		color: #fff;
+	}
+	.tbwb-button { margin-left: auto; }
+}
+
+// Text Block 2 Columns Block
+.text-block-2-columns {
+	.tb2c-column-wrapper {
+		margin-right: -63px;
+		margin-left: -63px;		
+	}
+	.tb2c-column {
+		max-width: 560px;
+		margin-right: 63px;
+		margin-left: 63px;
+	}
+}
+
+// Teammate Bock
+.teammate-block {
+	.teammate-wrapper {
+		margin-right: -19px;
+		margin-left: -19px;
+	}
+	.teammate {
+		width: 390px;
+		margin-right: 19px;
+		margin-left: 19px;
+		color: #a69e96;
+		.teammate-picture {
+			width: 100%;
+			height: 243px;
+		}
+		.teammate-position {
+			font-family: sans-serif;
+			font-weight: 300;
+			letter-spacing: 0.03em;		
+			font-size: 20px;
+		}
+		.teammate-quotation {
+			font-family: sans-serif;
+			font-weight: 500;
+			font-style: italic;
+			letter-spacing: 0.03em;		
+			font-size: 20px;
+		}
+	}
+}
+
+// Contact Form Block
+.contact-form {
+	.contact-form-title { color: #fff; }
+	.wpcf7 {
+		input,
+		textarea,
+		.wpcf7-not-valid-tip {
+			font-family: sans-serif;
+			font-weight: 300;
+			font-style: italic;
+			font-size: 20px;			
+		}
+		.wpcf7-form-control-wrap { width: 100%; }
+		input,
+		textarea {
+			width: 100%;
+			height: 60px;
+			padding: 17px 34px;
+			color: #fff;
+			background-color: transparent;
+			border: 1px solid #fff;
+			border-radius: 6px;
+		}
+		textarea { height: 240px; }
+		input::placeholder,
+		textarea::placeholder {
+			  color: #fff;
+		}
+		input[type="submit"] {
+			@extend .btn-1;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+	.wpcf7-response-output { display: none; }
+}
+
+// Imprint Block
+.imprint {
+	color: #fff;
+	a { color: #fff; }
+	.imprint-contect-heading {
+		font-size: 20px;
+		font-family: sans-serif;
+		font-weight: 700;
+		font-style: normal;
+	}
+}
+
+// Logo Block Layout Block
+.logo-block-layout {
+	.logo-block-link {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+}
+
+// Full Width Image Block
+.full-width-image {
+	width: 100%;
+	.full-width-image-img {
+		width: 100%;
+		height: auto;
+	}
+}

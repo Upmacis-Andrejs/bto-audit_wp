@@ -1,68 +1,79 @@
 //FONTS
- @font-face {
-  font-family: icon;
-  src: url(../fonts/icomoon.eot); /* IE9 Compat Modes */
-    src: url(../fonts/icomoon.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
-       url(../fonts/icomoon.woff) format('woff'), /* Pretty Modern Browsers */
-       url(../fonts/icomoon.ttf)  format('truetype'), /* Safari, Android, iOS */
-       url(../fonts/icomoon.svg) format('svg'); /* Legacy iOS */
-} 
+.Sari-Light {
+  font-family: sans-serif;  
+  font-weight: 300;
+  font-style: normal;
+}
+.Sari-Light-Italic {
+  font-family: sans-serif;    
+  font-weight: 300;
+  font-style: italic;
+}
+.Sari-Regular {
+  font-family: sans-serif;    
+  font-weight: 400;
+  font-style: normal;
+}
+.Sari-Regular-Italic {
+  font-family: sans-serif;  
+  font-weight: 400;
+  font-style: italic;
+}
+.Sari-Medium {
+  font-family: sans-serif;  
+  font-weight: 500;
+  font-style: normal;
+}
+.Sari-Medium-Italic {
+  font-family: sans-serif;  
+  font-weight: 500;
+  font-style: italic;
+}
+.Sari-Bold {
+  font-family: sans-serif;  
+  font-weight: 700;
+  font-style: normal;
+}
+.Sari-Bold-Italic {
+  font-family: sans-serif;  
+  font-weight: 700;
+  font-style: italic;
+}
 
-.Source-Sans-Pro-Regular {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400; 
-  font-style: normal;  
-}
-.Source-Sans-Pro-Bold {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700; 
-  font-style: normal;  
-}
 p, .p {
-  @extend .Source-Sans-Pro-Regular;
-  font-size: 17px;
-  letter-spacing: 0.01em;
-  color: #9097a4;
+  @extend .Sari-Regular;
+  font-size: 20px;
+}
+h6, .h6 {
+  @extend .Sari-Regular;
+  font-size: 22px;
+  line-height: 45px;
 }
 h5, .h5 {
-  @extend .Source-Sans-Pro-Regular;
-  font-size: 11px;
-  letter-spacing: 0.01em;  
+  @extend .Sari-Regular;
+  font-size: 25px;
+  line-height: 32px;
 }
 h4, .h4 {
-  @extend .Source-Sans-Pro-Regular;
-  font-size: 14px;
-  letter-spacing: 0.01em;
+  @extend .Sari-Bold-Italic;
+  font-size: 30px;
+  letter-spacing: 0.03em;
 }
 h3, .h3 {
-  @extend .Source-Sans-Pro-Regular;
-  font-size: 17px;
-  letter-spacing: 0.01em;
-}
-.h3-small {
-  @extend .Source-Sans-Pro-Regular;
-  font-size: 15px;
-  letter-spacing: 0.01em;
+  @extend .Sari-Regular;
+  font-size: 36px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
 }
 h2, .h2 {
-  @extend .Source-Sans-Pro-Bold;
-  font-size: 17px;
-  letter-spacing: 0.01em;
+  @extend .Sari-Light;
+  font-size: 50px;
+  line-height: 64px;
 }
 h1, .h1 {
-  @extend .Source-Sans-Pro-Regular;
-  font-size: 26px;
-  letter-spacing: 0.01em;
-}
-.h1-l {
-  @extend .Source-Sans-Pro-Regular;
-  font-size: 28px;
-  letter-spacing: 0.01em;
-}
-.h1-huge {
-  @extend .Source-Sans-Pro-Bold;
-  font-size: 250px;
-  letter-spacing: 0.01em;  
+  @extend .Sari-Regular;
+  font-size: 70px;
+  line-height: 81px;
 }
 
 [class^="i-"],
@@ -78,6 +89,7 @@ h1, .h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 @font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?9b9jp8');
