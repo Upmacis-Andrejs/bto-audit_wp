@@ -5,19 +5,82 @@
 	background-image: linear-gradient( 63deg, #08161f, #0d5b88 );
 }
 
+// Section Background
+.green-bg {
+	background-image: linear-gradient( 27deg, rgb(0,18,32), rgb(18,99,133) );
+	color: #fff!important;
+	a,
+	.a,
+	input,
+	input::placeholder,
+	.input,
+	textarea,
+	textarea::placeholder,
+	.textarea {
+		color: #fff!important;
+	}
+	a:hover,
+	a:active,
+	a:focus {
+	  color: #011D28!important;
+	}
+	.title-triangle .triangle-cut .triangle { background: #fff; }
+}
+.gray-bg {
+	background-image: linear-gradient( 27deg, rgb(26,25,31), rgb(148,157,148) );
+	color: #fff!important;
+	a,
+	.a,
+	input,
+	input::placeholder,
+	.input,
+	textarea,
+	textarea::placeholder, 
+	.textarea {
+		color: #fff!important;
+	}
+	a:hover,
+	a:active,
+	a:focus {
+	  color: #011D28!important;
+	}	
+	.title-triangle .triangle-cut .triangle { background: #fff; }
+}
+
+// Triangles
+.title-triangle {
+	.triangle-cut {
+		width: 37px;
+		height: 37px;
+		.triangle { background: #fff; }
+	}
+}
+
 // Text Block With Button Block
 .text-block-with-button {
 	padding-top: 120px; // ???
 	padding-bottom: 120px;
 	.tbwb-text {
 		max-width: 685px;
-		color: #fff;
+		.triangle-cut {
+			width: 86px;
+			height: 86px;
+			.triangle { background: #fff; }
+		}
 	}
 	.tbwb-button { margin-left: auto; }
+}
+.text-block-with-button.no-bg {
+	.triangle-cut .triangle { background-image: linear-gradient( 342deg, rgb(0,18,32), rgb(18,99,133) ); }
 }
 
 // Text Block 2 Columns Block
 .text-block-2-columns {
+	.triangle-cut {
+		width: 77px;
+		height: 77px;
+		.triangle { background-image: linear-gradient( 342deg, rgb(0,18,32), rgb(18,99,133) ); }
+	}
 	.tb2c-column-wrapper {
 		margin-right: -63px;
 		margin-left: -63px;		
@@ -28,9 +91,15 @@
 		margin-left: 63px;
 	}
 }
+.text-block-2-columns.green-bg,
+.text-block-2-columns.gray-bg {
+	.triangle-cut .triangle { background: #fff; }
+}
 
 // Teammate Bock
 .teammate-block {
+	color: #a69e96;
+	.title-triangle .triangle { background: #a69e96; }
 	.teammate-wrapper {
 		margin-right: -19px;
 		margin-left: -19px;
@@ -39,10 +108,25 @@
 		width: 390px;
 		margin-right: 19px;
 		margin-left: 19px;
-		color: #a69e96;
+		.triangle-cut {
+			width: 42px;
+			height: 42px;
+			.triangle { background: #A69E96; }
+		}
 		.teammate-picture {
 			width: 100%;
 			height: 243px;
+		}
+		.teammate-connections {
+			margin-right: 16px;
+			margin-bottom: 28px;
+			margin-left: 20px;
+		}
+		.teammate-link {
+			@extend .visuallyhidden;
+			margin-right: 12px;
+			margin-left: 12px;
+			font-size: 24px;
 		}
 		.teammate-position {
 			font-family: sans-serif;
@@ -58,11 +142,61 @@
 			font-size: 20px;
 		}
 	}
+	.teammate:hover,
+	.teammate:active,
+	.teammate:focus {
+		.teammate-picture:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient( 342deg, rgb(0,18,32), rgb(18,99,133) );
+			opacity: 0.81;
+			background-blend-mode: multiply;
+		}
+		.teammate-link {
+			@extend .visuallyshown;
+		}
+		color: #015B77;
+		.triangle-cut .triangle { background-image: linear-gradient( 342deg, rgb(0,18,32), rgb(18,99,133) ); }
+	}
+}
+
+// BRANCH Offices Block
+.branch-offices {
+	color: #a69e96;
+	.title-triangle .triangle { background: #a69e96; }	
+	.branch-office-wrapper {
+		margin-right: -19px;
+		margin-left: -19px;
+	}
+	.branch-office {
+		width: 390px;
+		margin-right: 19px;
+		margin-left: 19px;
+		.bo-list { list-style-type: none; }
+	}
+	.google-maps {
+		width: 100%;
+		padding-top: 100%;
+		iframe {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
 }
 
 // Contact Form Block
 .contact-form {
-	.contact-form-title { color: #fff; }
 	.wpcf7 {
 		input,
 		textarea,
@@ -78,29 +212,33 @@
 			width: 100%;
 			height: 60px;
 			padding: 17px 34px;
-			color: #fff;
-			background-color: transparent;
+			background: transparent;
 			border: 1px solid #fff;
 			border-radius: 6px;
 		}
 		textarea { height: 240px; }
 		input::placeholder,
 		textarea::placeholder {
-			  color: #fff;
 		}
 		input[type="submit"] {
 			@extend .btn-1;
 			padding-top: 0;
 			padding-bottom: 0;
 		}
+		.wpcf7-response-output { display: none!important; }
+		.contact-form .wpcf7 .wpcf7-not-valid-tip,
+		.contact-form .wpcf7 input,
+		.contact-form .wpcf7 textarea {
+			font-size: 16px;
+			margin-bottom: 5px; //?? nestrādā
+		}		
 	}
-	.wpcf7-response-output { display: none; }
 }
 
 // Imprint Block
 .imprint {
-	color: #fff;
-	a { color: #fff; }
+	color: #a69e96;
+	.title-triangle .triangle { background: #a69e96; }	
 	.imprint-contect-heading {
 		font-size: 20px;
 		font-family: sans-serif;

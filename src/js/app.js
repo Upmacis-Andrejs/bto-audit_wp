@@ -12,7 +12,6 @@ $(document).ready(function() {
 	//scroll the page according to clicked navigation item
 	$(".header-menu a, .teammate-email, .btn").click(function() {
 		var $href = $(this).attr('href');
-		var $href = $href.replace('#', '');
 	    $("html, body").animate({
 	        scrollTop: $($href).offset().top
 	    }, 500);

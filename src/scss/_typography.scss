@@ -76,111 +76,48 @@ h1, .h1 {
   line-height: 81px;
 }
 
-[class^="i-"],
-[class*="i-"] {
-  font-family: 'icon';
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?vogpfj');
+  src:  url('fonts/icomoon.eot?vogpfj#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?vogpfj') format('truetype'),
+    url('fonts/icomoon.woff?vogpfj') format('woff'),
+    url('fonts/icomoon.svg?vogpfj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-    /* Better Font Rendering =========== */
+
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-@font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?9b9jp8');
-  src:  url('fonts/icomoon.eot?9b9jp8#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?9b9jp8') format('truetype'),
-    url('fonts/icomoon.woff?9b9jp8') format('woff'),
-    url('fonts/icomoon.svg?9b9jp8#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
+.icon-email:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-facebook:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-xing:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-linkedin:before {
+  content: "\e903";
+  color: #fff;
 }
 
-.i-add:before {
-  content: "\e900";
-}
-.i-arrow-down:before {
-  content: "\e901";
-}
-.i-arrow-right:before {
-  content: "\e902";
-}
-.i-bg-dark-blue:before {
-  content: "\e903";
-  color: #364156;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
-.i-bg-light-blue:before {
-  content: "\e904";
-  color: #c7d3dd;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;  
-}
-.i-bg-lightest:before {
-  content: "\e905";
-  color: #e9edf1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;  
-}
-.i-check:before {
-  content: "\e906";
-}
-.i-clear:before {
-  content: "\e907";
-}
-.i-close:before {
-  content: "\e908";
-}
-.i-delete:before {
-  content: "\e909";
-}
-.i-fb:before {
-  content: "\e90a";
-}
-.i-google-plus:before {
-  content: "\e90b";
-}
-.i-grid:before {
-  content: "\e90c";
-}
-.i-list:before {
-  content: "\e90d";
-}
-.i-print:before {
-  content: "\e90e";
-}
-.i-show:before {
-  content: "\e90f";
-}
-.i-twitter:before {
-  content: "\e910";
-}
-.i-vk:before {
-  content: "\e911";
-}
 
 //END OF FONTS

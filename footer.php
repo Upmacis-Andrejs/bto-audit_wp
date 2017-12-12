@@ -1,5 +1,5 @@
 			<!-- footer -->
-			<footer class="footer flex-vert-c" id="site-footer" role="contentinfo" style="background-image: linear-gradient( 63deg, #001220, #126384 );">
+			<footer class="footer flex-vert-c" id="site-footer" role="contentinfo">
 				<div class="container">
 					<div class="row">
 						<!-- copyright -->

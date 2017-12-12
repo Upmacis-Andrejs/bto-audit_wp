@@ -37,6 +37,10 @@
   margin-right: -15px;
   margin-left: -15px;
 }
+.row .row {
+  margin-right: 0;
+  margin-left: 0;
+}
 .row:before,
 .row:after {
   content: "";
@@ -130,7 +134,7 @@ a:hover,
 a:active,
 a:focus {
   cursor: pointer!important;
-  @extend .orange;
+  color: #011D28!important;
 }
 textarea { resize: none; }
 input:focus,
@@ -151,7 +155,7 @@ html,
 body {
   font-size: 12px;  
   font-kerning: auto;
-  color: #000;
+  color: #015B77;
   overflow-x: hidden;  
 }
 #body-wrapper {
@@ -198,7 +202,7 @@ select *:hover,
   font-weight: 300;
   font-style: italic;
   color: #fff;  
-  background-image: linear-gradient( 63deg, #201c20, #a0a89c )!important;
+  background-image: linear-gradient( 27deg, rgb(26,25,31), rgb(148,157,148) )!important;
   border: 2px solid #fff;
   border-radius: 7px;
   overflow: hidden;
@@ -355,7 +359,7 @@ td {
 }
 
 // COLORS
-.darkest { color: #1a1a1a; }
+/* .darkest { color: #1a1a1a; }
 .gray { color: #9097a4; }
 .darker-blue { color: #212d40; }
 .dark-blue { color: #364156; }
@@ -364,10 +368,10 @@ td {
 .light-blue { color: #c7d3dd; }
 .lighter-blue { color: #e9edf1; }
 .lightest { color: #e9edf1; }
-.white { color: #fff; }
+.white { color: #fff; } */
 
 // BACKGROUND COLORS
-.bg-transparent { background-color: transparent; }
+/* .bg-transparent { background-color: transparent; }
 .bg-darkest { background-color: #1a1a1a; }
 .bg-gray { background-color: #9097a4; }
 .bg-darker-blue { background-color: #212d40; }
@@ -377,7 +381,7 @@ td {
 .bg-light-blue { background-color: #c7d3dd; }
 .bg-lighter-blue { background-color: #e9edf1; }
 .bg-lightest { background-color: #e9edf1; }
-.bg-white { background-color: #fff; }
+.bg-white { background-color: #fff; } */
 
 // SIZES
 .mw-60 { max-width: 60%; }
@@ -527,11 +531,11 @@ td {
   display: flex;
   justify-content: center;  
 }
-.flex-c {
+.flex-c-column {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column;    
 }
 .inline-hor-c { text-align: center; }
 .inline-vert-c { vertical-align: middle; }
@@ -647,6 +651,21 @@ img,
 .border-bottom-dashed { border-bottom: 1px dashed #c7d3dd; }
 .border-bottom-solid { border-bottom: 1px solid #c7d3dd; }
 .border-left-solid { border-left: 1px solid #c7d3dd; } */
+
+// SHAPES
+.triangle-cut {
+  overflow: hidden;
+  background-color: transparent;  
+}
+.triangle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200%;
+  height: 200%;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
 
 // END OF GENERAL STYLES
 /* ---------------------------------------------------------------------------------------------------------------------------- */
