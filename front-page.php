@@ -95,7 +95,7 @@
 										       			<div class="triangle-cut">
 										       				<div class="triangle"></div>
 										       			</div>
-										       			<div class="teammate-picture section-bg flex-ver-b" style="background-image: url(<?php the_sub_field('teammate-picture'); ?>)">
+										       			<div class="teammate-picture section-bg" style="background-image: url(<?php the_sub_field('teammate-picture'); ?>)">
 										       				<div class="teammate-connections row w-100">
 										       					<?php if( get_sub_field('teammate-linkedin') ): ?>
 										       						<a class="teammate-link teammate-linkedin icon-linkedin float-left text-decor-none" href="<?php the_sub_field('teammate-linkedin'); ?>" target="_blank"></a>
@@ -144,10 +144,10 @@
 						       				<div class="triangle"></div>
 						       			</div>
 										<div class="tb2c-column-wrapper flex-hor-c">
-									        <div class="tb2c-left tb2c-column">
+									        <div class="tb2c-left tb2c-column w-50 w-sm-100">
 									        	<?php the_sub_field('tb2c-left'); ?>
 									        </div>
-									        <div class="tb2c-right tb2c-column">
+									        <div class="tb2c-right tb2c-column w-50 w-sm-100">
 									        	<?php the_sub_field('tb2c-right'); ?>
 									        </div>
 									    </div>
@@ -273,7 +273,7 @@
 											</div>
 											<div class="imprint-content-block">
 												<h6 class="imprint-contect-heading"><?php _e('Web Beratung, -Design & -Programmierung', 'btoaudit'); ?></h6>
-												<a class="p imprint-content-content text-decor-none" href="http://creationworx.com/"><?php _e('creationworx.ch', 'btoaudit'); ?></a>												
+												<a class="p imprint-content-content text-decor-none" href="http://creationworx.com/" target="_blank"><?php _e('creationworx.ch', 'btoaudit'); ?></a>												
 											</div>											
 										</div>
 								    </div>
@@ -307,9 +307,9 @@
 				    							if( have_rows('logo_block') ):
 				    								// loop through the rows of data
 						    						while ( have_rows('logo_block') ) : the_row(); ?>
-														<a class="logo-block-link flex-vert-c" href="<?php the_sub_field('logo_block-link'); ?>">
-															<span class="logo-block-img-wrap">
-																<img class="logo-block-img" src="<?php the_sub_field('logo_block-img'); ?>" alt="logo image">
+														<a class="logo-block-link flex-vert-c w-33" href="<?php the_sub_field('logo_block-link'); ?>" target="_blank">
+															<span class="logo-block-img-wrap inline-hor-c w-100">
+																<img class="logo-block-img inline-block" src="<?php the_sub_field('logo_block-img'); ?>" alt="logo image">
 															</span>
 														</a>
 										    		<?php endwhile;

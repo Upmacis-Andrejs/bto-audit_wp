@@ -272,9 +272,13 @@ select *:hover,
   max-width: 100%;
   width: 100%;
 }
+.w-50 {
+  max-width: 50%;
+  width: 50%;
+}
 .w-33 {
-  max-width: 33%;
-  width: 33%;
+  max-width: (100% / 3);
+  width: (100% / 3);
 }
 @media(max-width: 991px) {
   .w-sm-100 {
@@ -299,7 +303,8 @@ select *:hover,
 }
 .flex-ver-b {
   display: flex;
-  align-items: flex-end;  
+  align-items: flex-end;
+  flex-wrap: wrap;   
 }
 .flex-hor-c {
   display: flex;

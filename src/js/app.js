@@ -18,7 +18,7 @@ $(document).ready(function() {
 	$(".header-menu a, .teammate-email, .btn").click(function() {
 		var $href = $(this).attr('href');
 	    $("html, body").animate({
-	        scrollTop: $($href).offset().top
+	        scrollTop: $($href).offset().top + 2
 	    }, 500);
 	    return false;
 	});

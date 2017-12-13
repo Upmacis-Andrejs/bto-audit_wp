@@ -1,27 +1,27 @@
 //FONTS
 @font-face {
-  font-family: 'SariWebProReguar';
-  src:  url('fonts/SariWebProReguar.eot');
-  src:  url('fonts/SariWebProReguar.eot?#iefix') format('embedded-opentype'),
-    url('fonts/SariWebProReguar.ttf') format('truetype'),
-    url('fonts/SariWebProReguar.woff') format('woff'),
-    url('fonts/SariWebProReguar.svg#SariWebProReguar') format('svg');
+  font-family: 'SariWebProRegular';
+  src:  url('fonts/SariWebProRegular.eot');
+  src:  url('fonts/SariWebProRegular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/SariWebProRegular.ttf') format('truetype'),
+    url('fonts/SariWebProRegular.woff') format('woff'),
+    url('fonts/SariWebProRegular.svg#SariWebProRegular') format('svg');
 }
 @font-face {
-  font-family: 'SariWebProReguarItalic';
-  src:  url('fonts/SariWebProReguarItalic.eot');
-  src:  url('fonts/SariWebProReguarItalic.eot?#iefix') format('embedded-opentype'),
-    url('fonts/SariWebProReguarItalic.ttf') format('truetype'),
-    url('fonts/SariWebProReguarItalic.woff') format('woff'),
-    url('fonts/SariWebProReguarItalic.svg#SariWebProReguarItalic') format('svg');  
+  font-family: 'SariWebProRegularItalic';
+  src:  url('fonts/SariWebProRegularItalic.eot');
+  src:  url('fonts/SariWebProRegularItalic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/SariWebProRegularItalic.ttf') format('truetype'),
+    url('fonts/SariWebProRegularItalic.woff') format('woff'),
+    url('fonts/SariWebProRegularItalic.svg#SariWebProRegularItalic') format('svg');  
 }
 @font-face {
-  font-family: 'SariWebProReguarSC';
-  src:  url('fonts/SariWebProReguarSC.eot');
-  src:  url('fonts/SariWebProReguarSC.eot?#iefix') format('embedded-opentype'),
-    url('fonts/SariWebProReguarSC.ttf') format('truetype'),
-    url('fonts/SariWebProReguarSC.woff') format('woff'),
-    url('fonts/SariWebProReguarSC.svg#SariWebProReguarSC') format('svg');
+  font-family: 'SariWebProRegularSC';
+  src:  url('fonts/SariWebProRegularSC.eot');
+  src:  url('fonts/SariWebProRegularSC.eot?#iefix') format('embedded-opentype'),
+    url('fonts/SariWebProRegularSC.ttf') format('truetype'),
+    url('fonts/SariWebProRegularSC.woff') format('woff'),
+    url('fonts/SariWebProRegularSC.svg#SariWebProRegularSC') format('svg');
 }
 @font-face {
   font-family: 'SariWebProBold';
@@ -49,23 +49,23 @@
 }
 
 .Sari-Light {
-  font-family: 'SariWebProReguar', sans-serif;  
+  font-family: 'SariWebProRegular', sans-serif;  
   // font-weight: 300;
 }
 .Sari-Light-Italic {
-  font-family: 'SariWebProReguarItalic', sans-serif;    
+  font-family: 'SariWebProRegularItalic', sans-serif;    
   // font-weight: 300;
 }
 .Sari-Regular {
-  font-family: 'SariWebProReguar', sans-serif;
+  font-family: 'SariWebProRegular', sans-serif;
   // font-weight: 400;
 }
 .Sari-Regular-Italic {
-  font-family: 'SariWebProReguarItalic', sans-serif; 
+  font-family: 'SariWebProRegularItalic', sans-serif; 
   // font-weight: 400;
 }
 .Sari-Regular-Caps {
-  font-family: 'SariWebProReguarSC', sans-serif;
+  font-family: 'SariWebProRegularSC', sans-serif;
   // font-weight: 400;
 }
 .Sari-Medium {
@@ -127,11 +127,11 @@ h1, .h1 {
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?af8jwd');
-  src:  url('fonts/icomoon.eot?af8jwd#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?af8jwd') format('truetype'),
-    url('fonts/icomoon.woff?af8jwd') format('woff'),
-    url('fonts/icomoon.svg?af8jwd#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?iurc1p');
+  src:  url('fonts/icomoon.eot?iurc1p#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?iurc1p') format('truetype'),
+    url('fonts/icomoon.woff?iurc1p') format('woff'),
+    url('fonts/icomoon.svg?iurc1p#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -153,30 +153,31 @@ h1, .h1 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-linkedin:before {
+.icon-triangle:before {
   content: "\e900";
   color: #fff;
 }
-.icon-phone:before {
+.icon-facebook:before {
   content: "\e901";
   color: #fff;
 }
-.icon-place:before {
+.icon-linkedin:before {
   content: "\e902";
   color: #fff;
 }
-.icon-triangle:before {
+.icon-phone:before {
   content: "\e903";
+  color: #fff;
 }
-.icon-xing:before {
+.icon-place:before {
   content: "\e904";
   color: #fff;
 }
-.icon-email:before {
+.icon-xing:before {
   content: "\e905";
   color: #fff;
 }
-.icon-facebook:before {
+.icon-email:before {
   content: "\e906";
   color: #fff;
 }
