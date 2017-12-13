@@ -1,46 +1,95 @@
 //FONTS
-.Sari-Light {
-  font-family: sans-serif;  
-  font-weight: 300;
-  font-style: normal;
+@font-face {
+  font-family: 'SariWebProReguar';
+  src:  url('fonts/SariWebProReguar.eot');
+  src:  url('fonts/SariWebProReguar.eot?#iefix') format('embedded-opentype'),
+    url('fonts/SariWebProReguar.ttf') format('truetype'),
+    url('fonts/SariWebProReguar.woff') format('woff'),
+    url('fonts/SariWebProReguar.svg#SariWebProReguar') format('svg');
 }
-.Sari-Light-Italic {
-  font-family: sans-serif;    
-  font-weight: 300;
-  font-style: italic;
+@font-face {
+  font-family: 'SariWebProReguarItalic';
+  src:  url('fonts/SariWebProReguarItalic.eot');
+  src:  url('fonts/SariWebProReguarItalic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/SariWebProReguarItalic.ttf') format('truetype'),
+    url('fonts/SariWebProReguarItalic.woff') format('woff'),
+    url('fonts/SariWebProReguarItalic.svg#SariWebProReguarItalic') format('svg');  
 }
-.Sari-Regular {
-  font-family: sans-serif;    
-  font-weight: 400;
-  font-style: normal;
+@font-face {
+  font-family: 'SariWebProReguarSC';
+  src:  url('fonts/SariWebProReguarSC.eot');
+  src:  url('fonts/SariWebProReguarSC.eot?#iefix') format('embedded-opentype'),
+    url('fonts/SariWebProReguarSC.ttf') format('truetype'),
+    url('fonts/SariWebProReguarSC.woff') format('woff'),
+    url('fonts/SariWebProReguarSC.svg#SariWebProReguarSC') format('svg');
 }
-.Sari-Regular-Italic {
-  font-family: sans-serif;  
-  font-weight: 400;
-  font-style: italic;
+@font-face {
+  font-family: 'SariWebProBold';
+  src:  url('fonts/SariWebProBold.eot');
+  src:  url('fonts/SariWebProBold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/SariWebProBold.ttf') format('truetype'),
+    url('fonts/SariWebProBold.woff') format('woff'),
+    url('fonts/SariWebProBold.svg#SariWebProBold') format('svg');
 }
-.Sari-Medium {
-  font-family: sans-serif;  
-  font-weight: 500;
-  font-style: normal;
+@font-face {
+  font-family: 'SariWebProBoldItalic';
+  src:  url('fonts/SariWebProBoldItalic.eot');
+  src:  url('fonts/SariWebProBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/SariWebProBoldItalic.ttf') format('truetype'),
+    url('fonts/SariWebProBoldItalic.woff') format('woff'),
+    url('fonts/SariWebProBoldItalic.svg#SariWebProBoldItalic') format('svg'); 
 }
-.Sari-Medium-Italic {
-  font-family: sans-serif;  
-  font-weight: 500;
-  font-style: italic;
-}
-.Sari-Bold {
-  font-family: sans-serif;  
-  font-weight: 700;
-  font-style: normal;
-}
-.Sari-Bold-Italic {
-  font-family: sans-serif;  
-  font-weight: 700;
-  font-style: italic;
+@font-face {
+  font-family: 'SariWebProBoldSC';
+  src:  url('fonts/SariWebProBoldSC.eot');
+  src:  url('fonts/SariWebProBoldSC.eot?#iefix') format('embedded-opentype'),
+    url('fonts/SariWebProBoldSC.ttf') format('truetype'),
+    url('fonts/SariWebProBoldSC.woff') format('woff'),
+    url('fonts/SariWebProBoldSC.svg#SariWebProBoldSC') format('svg'); 
 }
 
-p, .p {
+.Sari-Light {
+  font-family: 'SariWebProReguar', sans-serif;  
+  // font-weight: 300;
+}
+.Sari-Light-Italic {
+  font-family: 'SariWebProReguarItalic', sans-serif;    
+  // font-weight: 300;
+}
+.Sari-Regular {
+  font-family: 'SariWebProReguar', sans-serif;
+  // font-weight: 400;
+}
+.Sari-Regular-Italic {
+  font-family: 'SariWebProReguarItalic', sans-serif; 
+  // font-weight: 400;
+}
+.Sari-Regular-Caps {
+  font-family: 'SariWebProReguarSC', sans-serif;
+  // font-weight: 400;
+}
+.Sari-Medium {
+  font-family: 'SariWebProBold', sans-serif;  
+  // font-weight: 500;
+}
+.Sari-Medium-Italic {
+  font-family: 'SariWebProBoldItalic', sans-serif;  
+  // font-weight: 500;
+}
+.Sari-Bold {
+  font-family: 'SariWebProBold', sans-serif;
+  // font-weight: 700;
+}
+.Sari-Bold-Italic {
+  font-family: 'SariWebProBoldItalic', sans-serif;
+  // font-weight: 700;
+}
+.Sari-Bold-Caps {
+  font-family: 'SariWebProBoldSC', sans-serif;
+  // font-weight: 700;
+}
+
+p, .p, body {
   @extend .Sari-Regular;
   font-size: 20px;
 }
@@ -52,7 +101,7 @@ h6, .h6 {
 h5, .h5 {
   @extend .Sari-Regular;
   font-size: 25px;
-  line-height: 32px;
+  line-height: 1.28;
 }
 h4, .h4 {
   @extend .Sari-Bold-Italic;
@@ -78,16 +127,18 @@ h1, .h1 {
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?vogpfj');
-  src:  url('fonts/icomoon.eot?vogpfj#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?vogpfj') format('truetype'),
-    url('fonts/icomoon.woff?vogpfj') format('woff'),
-    url('fonts/icomoon.svg?vogpfj#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?af8jwd');
+  src:  url('fonts/icomoon.eot?af8jwd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?af8jwd') format('truetype'),
+    url('fonts/icomoon.woff?af8jwd') format('woff'),
+    url('fonts/icomoon.svg?af8jwd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"],
+.icon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -102,20 +153,31 @@ h1, .h1 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-email:before {
+.icon-linkedin:before {
   content: "\e900";
   color: #fff;
 }
-.icon-facebook:before {
+.icon-phone:before {
   content: "\e901";
   color: #fff;
 }
-.icon-xing:before {
+.icon-place:before {
   content: "\e902";
   color: #fff;
 }
-.icon-linkedin:before {
+.icon-triangle:before {
   content: "\e903";
+}
+.icon-xing:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-email:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-facebook:before {
+  content: "\e906";
   color: #fff;
 }
 

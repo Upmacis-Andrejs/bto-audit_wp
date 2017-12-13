@@ -10,13 +10,14 @@
 			'order' 	=> 'ASC'
 		);
 		$pageNumber = -1;
+		$customFieldGroupNumber = 0;
 		$the_query = new WP_Query( $args ); ?>
 
 		<?php if ( $the_query->have_posts() ) : ?>
 
 			<!-- the loop -->
-			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); $pageNumber++ ?>
-				<section id="<?php $title = get_the_title(); echo strtolower(str_replace(' ', '-', $title)); ?>">
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); $pageNumber++; $customFieldGroupNumber = 0; ?>
+				<section id="<?php $title = get_the_title(); echo strtolower(str_replace(' ', '-', $title)); ?>" class="section-<?php echo $pageNumber; ?>">
 					<?php if( $pageNumber>=2 ) : ?>					
 						<div class="section-title-block flex-vert-c">
 							<div class="container">
@@ -40,12 +41,14 @@
 					if( have_rows('page_builder_content') ):
 
 					 	// loop through the rows of data
-					    while ( have_rows('page_builder_content') ) : the_row(); ?>
+					    while ( have_rows('page_builder_content') ) : the_row(); $customFieldGroupNumber++; ?>
 
 					        <?php if( get_row_layout() == 'text_block_with_button' ): ?>
 					        <!-- Text Block With Button Block -->
 					        <div class="custom-field-group text-block-with-button 
-    						<?php if( get_sub_field('tbwb-bg_color') == 'green' ): 
+    						<?php
+    						echo 'custom-field-group-' . $customFieldGroupNumber . ' ';
+    						if( get_sub_field('tbwb-bg_color') == 'green' ): 
 								echo 'green-bg';
 							elseif ( get_sub_field('tbwb-bg_color') == 'gray' ): 
 								echo 'gray-bg';
@@ -59,9 +62,9 @@
 												<span class="triangle-cut">
 													<span class="triangle"></span>
 												</span>
-												<?php the_sub_field('tbwb-text'); ?>
+												<?php echo wpautop( get_sub_field('tbwb-text') ); ?>
 											</div>
-											<button class="tbwb-button btn btn-1" href="#contact-form">
+											<button class="tbwb-button btn btn-1 float-right" href="#contact-form">
 												<?php the_sub_field('tbwb-button'); ?>
 											</button>
 										</div>
@@ -72,7 +75,9 @@
 					        <?php elseif ( get_row_layout() == 'teammate_block' ): ?>
 							<!-- Teammate Block -->					        	
 	    						<div class="custom-field-group teammate-block 
-	    						<?php if( get_sub_field('teammate_block-bg_color') == 'green' ): 
+	    						<?php
+    							echo 'custom-field-group-' . $customFieldGroupNumber . ' ';
+    							if( get_sub_field('teammate_block-bg_color') == 'green' ): 
 									echo 'green-bg';
 								elseif ( get_sub_field('teammate_block-bg_color') == 'gray' ): 
 									echo 'gray-bg';
@@ -86,7 +91,7 @@
 				    							if( have_rows('teammate') ):
 				    								// loop through the rows of data
 						    						while ( have_rows('teammate') ) : the_row(); ?>
-										       		<div class="teammate">
+										       		<div class="teammate w-33 w-sm-100">
 										       			<div class="triangle-cut">
 										       				<div class="triangle"></div>
 										       			</div>
@@ -124,7 +129,9 @@
 		    				<?php elseif ( get_row_layout() == 'text_block_2_columns' ): ?>
 		    				<!-- Text Block 2 Columns Block -->
 		    				<div class="custom-field-group text-block-2-columns 
-    						<?php if( get_sub_field('tb2c-bg_color') == 'green' ): 
+    						<?php
+    						echo 'custom-field-group-' . $customFieldGroupNumber . ' ';
+    						if( get_sub_field('tb2c-bg_color') == 'green' ): 
 								echo 'green-bg';
 							elseif ( get_sub_field('tb2c-bg_color') == 'gray' ): 
 								echo 'gray-bg';
@@ -151,7 +158,9 @@
 					        <?php elseif ( get_row_layout() == 'branch_offices' ): ?>
 					        <!-- Branch Offices Block -->
 	    						<div class="custom-field-group branch-offices
-	    						<?php if( get_sub_field('bo-bg_color') == 'green' ): 
+	    						<?php
+    							echo 'custom-field-group-' . $customFieldGroupNumber . ' ';
+    							if( get_sub_field('bo-bg_color') == 'green' ): 
 									echo 'green-bg';
 								elseif ( get_sub_field('bo-bg_color') == 'gray' ): 
 									echo 'gray-bg';
@@ -174,7 +183,7 @@
 						    							$address_1 = strtolower(str_replace(' ', '+', $address_1));
 						    							$address_2 = get_sub_field('bo-address_2');
 						    							$address_2 = strtolower(str_replace(' ', '+', $address_2)); ?>
-						    							<div class="branch-office">
+						    							<div class="branch-office w-33 w-sm-100">
 						    								<ul class="bo-address bo-list">
 						    									<li class="bo-bo_name"><?php the_sub_field('bo-bo_name'); ?></li>
 						    									<li class="bo-address_1"><?php the_sub_field('bo-address_1'); ?></li>
@@ -208,7 +217,9 @@
 		    				<?php elseif ( get_row_layout() == 'contact_form' ): ?>
 		    				<!-- Contact Form Block -->
 		    				<div class="custom-field-group contact-form 
-    						<?php if( get_sub_field('cf-bg_color') == 'green' ): 
+    						<?php
+    						echo 'custom-field-group-' . $customFieldGroupNumber . ' ';
+    						if( get_sub_field('cf-bg_color') == 'green' ): 
 								echo 'green-bg';
 							elseif ( get_sub_field('cf-bg_color') == 'gray' ): 
 								echo 'gray-bg';
@@ -234,13 +245,15 @@
 		    				<?php elseif ( get_row_layout() == 'imprint' ): ?>
 		    				<!-- Imprint Block -->
 		    				<div class="custom-field-group imprint 
-    						<?php if( get_sub_field('imprint-bg_color') == 'green' ): 
+    						<?php
+    						echo 'custom-field-group-' . $customFieldGroupNumber . ' ';
+    						if( get_sub_field('imprint-bg_color') == 'green' ): 
 								echo 'green-bg';
 							elseif ( get_sub_field('imprint-bg_color') == 'gray' ): 
 								echo 'gray-bg';
 							else :
 								echo 'no-bg';
-							endif; ?>" id="contact-form">
+							endif; ?>">
 								<div class="container">
 									<div class="row">
 										<h2 class="custom-field-group-title title-triangle">
@@ -269,14 +282,18 @@
 							<!-- /Imprint Block -->							
 				    		<?php elseif ( get_row_layout() == 'full_width_image' ): ?>
 				    		<!-- Full Width Image Block -->		    			
-						    	<div class="custom-field-group full-width-image">
+						    	<div class="custom-field-group full-width-image
+						    	<?php
+    							echo 'custom-field-group-' . $customFieldGroupNumber . ' '; ?>">
 						    		<img class="full-width-image-img" src="<?php the_sub_field('full_width_image-img'); ?>" alt="full width image">
 						    	</div>
 						    <!-- /Full Width Image Block -->
 					        <?php elseif ( get_row_layout() == 'logo_block_layout' ): ?>
 					        <!-- Logo Block Layout Block -->
 						        <div class="custom-field-group logo-block-layout 
-	    						<?php if( get_sub_field('lb-bg_color') == 'green' ): 
+	    						<?php
+    							echo 'custom-field-group-' . $customFieldGroupNumber . ' ';
+    							if( get_sub_field('lb-bg_color') == 'green' ): 
 									echo 'green-bg';
 								elseif ( get_sub_field('lb-bg_color') == 'gray' ): 
 									echo 'gray-bg';

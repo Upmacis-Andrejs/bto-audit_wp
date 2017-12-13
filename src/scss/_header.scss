@@ -1,25 +1,102 @@
-#site-header { background-color: green; }
 
-.header-logo > a {
-	width: 150px;
-	height: 83px;
+// Site Header
+#site-header {
+	padding-top: 65px;
+	margin-bottom: -180px;
+	.container > .row { width: calc(100% + 30px); }
 }
-.header-menu {
+#site-header.open {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-image: url('img/team.jpg');
+	@extend .section-bg;
+	background-position: 50% 0%;
+	background-blend-mode: multiply;
+}
+#site-header.open:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient( 27deg, rgb(0,18,32), rgb(18,99,133) );
+	opacity: 0.81;
+}
+
+// Navigation Icon + Effects
+#nav-icon {
+  width: 42px;
+  height: 27px;
+  position: relative;
+  span {
+	  display: block;
+	  position: absolute;
+	  height: 5px;
+	  width: 100%;
+	  background: #fff;
+	  opacity: 1;
+	  left: 0;
+	  transform: rotate(0deg);
+	  transition: .2s ease-in-out;  	
+  }
+  span:nth-of-type(1) { top: 0px; }
+  span:nth-of-type(2),
+  span:nth-of-type(3) {
+  	top: 11px;
+  }
+  span:nth-of-type(4) { top: 22px; }
+}
+
+#nav-icon.open {
+	span:nth-of-type(1),
+	span:nth-of-type(4) {
+	  opacity: 0;
+	}
+	span:nth-of-type(1) { transform: translate(0px,11px) scale(0.1); }
+	span:nth-of-type(4) { transform: translate(0px,-11px) scale(0.1); }
+	span:nth-of-type(2) { transform: rotate(45deg); }
+	span:nth-of-type(3) { transform: rotate(-45deg); }
+}
+
+// Header Logo
+#site-header .header-logo { margin-left: auto; }
+
+// Header Menu
+#site-header .nav-wrapper { flex-grow: 1; }
+#site-header .nav {
+	padding-bottom: 100px;
+}
+#site-header .header-menu {
 	list-style-type: none;
-	a,
+	a {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		font-size: 50px;
+		@extend .Sari-Regular;
+		letter-spacing: 0.05em;
+		color: #fff;
+		@extend .text-decor-none;
+	}
 	a:hover,
 	a:active,
-	a:focus,
-	a:visited {
-		text-decoration: none;
+	a:focus {
+		color: #fff!important;
+		@extend .Sari-Bold-Italic;
+		@extend .icon-triangle;
 	}
-	.sub-menu {
-		display: none;
-		list-style-type: none;
-	}
-	.menu-item-has-children:hover > .sub-menu,
-	.menu-item-has-children:active > .sub-menu {
-		display: block;
+	a:hover:before,
+	a:active:before,
+	a:focus:before {
+		margin-right: 20px;
+		font-size: 37px;
+		@extend .icon;
 	}
 }
-.header-menu > li { float: left; }

@@ -30,22 +30,25 @@
 		<div class="wrapper" id="body-wrapper">
 
 			<!-- header -->
-			<header class="header clear" id="site-header" role="banner">
-				<div class="container">
+			<header class="header z-99 clear" id="site-header" role="banner">
+				<div class="container flex h-100">
 					<div class="row">
-					
+						<a class="float-left" id="nav-icon" href="#">
+						  <span></span>
+						  <span></span>
+						  <span></span>
+						  <span></span>
+						</a>
+						<div class="header-logo float-right">
+							<?php my_custom_logo(); ?>
+						</div>
+					</div>
+					<div class="row flex-ver-b nav-wrapper">
 						<!-- nav -->
-						<nav class="nav" role="navigation">
+						<nav class="nav hidden" role="navigation">
 							<?php btoaudit_nav(); ?>
 						</nav>
 						<!-- /nav -->
-
-						<!-- logo -->
-						<div class="logo">
-							<?php my_custom_logo(); ?>
-						</div>
-						<!-- /logo -->
-
 					</div>
 				</div>
 			</header>
