@@ -260,6 +260,10 @@
 			@extend .Sari-Regular-Italic;
 			font-size: 20px;			
 		}
+		.wpcf7-not-valid-tip {
+			margin-top: -10px;
+			margin-bottom: 15px;
+		}
 		.wpcf7-form-control-wrap { width: 100%; }
 		input,
 		textarea {

@@ -47,13 +47,45 @@
     url('fonts/SariWebProBoldSC.woff') format('woff'),
     url('fonts/SariWebProBoldSC.svg#SariWebProBoldSC') format('svg'); 
 }
+@font-face {
+  font-family: 'SariWebProLightItalic';
+  src: url('fonts/SariWebProLightItalic.eot');
+  src: url('fonts/SariWebProLightItalic.eot?#iefix') format('embedded-opentype'),
+  url('fonts/SariWebProLightItalic.woff') format('woff'),
+  url('fonts/SariWebProLightItalic.ttf') format('truetype'),
+  url('fonts/SariWebProLightItalic.svg#SariWebProLightItalic') format('svg');   
+}
+@font-face {
+  font-family: 'SariWebProLight';
+  src: url('fonts/SariWebProLight.eot');
+  src: url('fonts/SariWebProLight.eot?#iefix') format('embedded-opentype'),
+  url('fonts/SariWebProLight.woff') format('woff'),
+  url('fonts/SariWebProLight.ttf') format('truetype'),
+  url('fonts/SariWebProLight.svg#SariWebProLight') format('svg');   
+}
+@font-face {
+  font-family: 'SariWebProMediumItalic';
+  src: url('fonts/SariWebProMediumItalic.eot');
+  src: url('fonts/SariWebProMediumItalic.eot?#iefix') format('embedded-opentype'),
+  url('fonts/SariWebProMediumItalic.woff') format('woff'),
+  url('fonts/SariWebProMediumItalic.ttf') format('truetype'),
+  url('fonts/SariWebProMediumItalic.svg#SariWebProMediumItalic') format('svg');   
+}
+@font-face {
+  font-family: 'SariWebProMedium';
+  src: url('fonts/SariWebProMedium.eot');
+  src: url('fonts/SariWebProMedium.eot?#iefix') format('embedded-opentype'),
+  url('fonts/SariWebProMedium.woff') format('woff'),
+  url('fonts/SariWebProMedium.ttf') format('truetype'),
+  url('fonts/SariWebProMedium.svg#SariWebProMedium') format('svg');   
+}
 
 .Sari-Light {
-  font-family: 'SariWebProRegular', sans-serif;  
+  font-family: 'SariWebProLight', sans-serif;  
   // font-weight: 300;
 }
 .Sari-Light-Italic {
-  font-family: 'SariWebProRegularItalic', sans-serif;    
+  font-family: 'SariWebProLightItalic', sans-serif;    
   // font-weight: 300;
 }
 .Sari-Regular {
@@ -69,11 +101,11 @@
   // font-weight: 400;
 }
 .Sari-Medium {
-  font-family: 'SariWebProBold', sans-serif;  
+  font-family: 'SariWebProMedium', sans-serif;  
   // font-weight: 500;
 }
 .Sari-Medium-Italic {
-  font-family: 'SariWebProBoldItalic', sans-serif;  
+  font-family: 'SariWebProMediumItalic', sans-serif;  
   // font-weight: 500;
 }
 .Sari-Bold {

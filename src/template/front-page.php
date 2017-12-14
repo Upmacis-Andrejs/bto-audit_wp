@@ -58,13 +58,13 @@
 								<div class="container">
 									<div class="row">
 										<div class="flex-ver-b">
-											<div class="tbwb-text">
+											<div class="tbwb-text" data-aos="fade" data-aos-delay="200" data-aos-duration="400">
 												<span class="triangle-cut">
 													<span class="triangle"></span>
 												</span>
 												<?php echo wpautop( get_sub_field('tbwb-text') ); ?>
 											</div>
-											<button class="tbwb-button btn btn-1 float-right" href="#contact-form">
+											<button class="tbwb-button btn btn-1 float-right" href="#contact-form" data-aos="fade" data-aos-delay="1000" data-aos-duration="1300">
 												<?php the_sub_field('tbwb-button'); ?>
 											</button>
 										</div>
@@ -114,9 +114,9 @@
 										       				</div>
 										       			</div>
 										       			<div class="teammate-contents">
-										       				<h3 class="teammate-name all-caps"><?php the_sub_field('teammate-name'); ?></h3>
-										       				<p class="teammate-position"><?php the_sub_field('teammate-position'); ?></p>
-										       				<p class="teammate-quotation">«<?php the_sub_field('teammate-quotation'); ?>»</p>
+										       				<h3 class="teammate-name all-caps" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800"><?php the_sub_field('teammate-name'); ?></h3>
+										       				<p class="teammate-position" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800"><?php the_sub_field('teammate-position'); ?></p>
+										       				<p class="teammate-quotation" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" data-aos-offset="100">«<?php the_sub_field('teammate-quotation'); ?>»</p>
 										       			</div>
 										       		</div>
 										       		<?php endwhile;
@@ -143,7 +143,7 @@
 										<div class="triangle-cut">
 						       				<div class="triangle"></div>
 						       			</div>
-										<div class="tb2c-column-wrapper flex-hor-c">
+										<div class="tb2c-column-wrapper flex-hor-c" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-offset="200">
 									        <div class="tb2c-left tb2c-column w-50 w-sm-100">
 									        	<?php the_sub_field('tb2c-left'); ?>
 									        </div>
@@ -155,7 +155,7 @@
 								</div>
 							</div>
 							<!-- /Text Block 2 Columns Block -->							
-					        <?php elseif ( get_row_layout() == 'branch_offices' ): ?>
+					        <?php elseif ( get_row_layout() == 'branch_offices' ): $branch__offices_count=-1; ?>
 					        <!-- Branch Offices Block -->
 	    						<div class="custom-field-group branch-offices
 	    						<?php
@@ -179,17 +179,18 @@
 				    							<?php if( have_rows('branch_office') ):
 				    								// loop through the rows of data
 						    						while ( have_rows('branch_office') ) : the_row();
+						    							$branch__offices_count++;
 						    							$address_1 = get_sub_field('bo-address_1');
 						    							$address_1 = strtolower(str_replace(' ', '+', $address_1));
 						    							$address_2 = get_sub_field('bo-address_2');
 						    							$address_2 = strtolower(str_replace(' ', '+', $address_2)); ?>
 						    							<div class="branch-office w-33 w-sm-100">
-						    								<ul class="bo-address bo-list">
+						    								<ul class="bo-address bo-list" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
 						    									<li class="bo-bo_name"><?php the_sub_field('bo-bo_name'); ?></li>
 						    									<li class="bo-address_1"><?php the_sub_field('bo-address_1'); ?></li>
 						    									<li class="bo-address_2"><?php the_sub_field('bo-address_2'); ?></li>
 						    								</ul>
-						    								<ul class="bo-contacts bo-list">
+						    								<ul class="bo-contacts bo-list" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 						    									<li class="bo-phone">
 						    										<a class="text-decor-none" href="tel:<?php $phone = get_sub_field('bo-phone'); echo str_replace(' ', '', $phone); ?>">
 						    											<?php the_sub_field('bo-phone'); ?>
@@ -199,13 +200,13 @@
 						    										<a href="mailto:<?php the_sub_field('bo-email'); ?>"><?php the_sub_field('bo-email'); ?></a>
 						    									</li>
 						    								</ul>
-						    								<div class="google-maps">
+						    								<div class="google-maps" data-aos="fade" data-aos-delay="<?php echo (100 + $branch__offices_count * 150) ?>" data-aos-duration="800" data-aos-offset="150">
 						    									<iframe
 																  style="border:0"
 																  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAiWaHtquUedxU34km3yEKsaq4BkjrTmGs&q=<?php echo $address_1 . '+' . $address_2 ?>" allowfullscreen>
 																</iframe>
 						    								</div>
-						    								<a class="google-maps-directions" href="https://www.google.com/maps/dir/?api=1&destination=<?php echo $address_1 . '+' . $address_2 ?>" target="_blank">>&nbsp;<?php _e('Routenplaner in Googlemaps öffnen', 'btoaudit'); ?></a>
+						    								<a class="google-maps-directions" href="https://www.google.com/maps/dir/?api=1&destination=<?php echo $address_1 . '+' . $address_2 ?>" target="_blank" data-aos="fade" data-aos-delay="<?php echo (100 + $branch__offices_count * 150) ?>" data-aos-duration="800">>&nbsp;<?php _e('Routenplaner in Googlemaps öffnen', 'btoaudit'); ?></a>
 						    							</div>
 					    							<?php endwhile; ?>
 					    						<?php endif; ?>	
@@ -234,10 +235,12 @@
 											</span>
 											<span><?php _e('Kontaktformular', 'btoaudit'); ?></span>
 										</h2>
-										<?php
-											$contact_form = get_sub_field('cf-form');
-											echo do_shortcode($contact_form);
-										?>
+										<div class="contact-form-wrapper" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1100" data-aos-offset="200">
+											<?php
+												$contact_form = get_sub_field('cf-form');
+												echo do_shortcode($contact_form);
+											?>
+										</div>
 								    </div>
 								</div>
 							</div>
@@ -263,15 +266,15 @@
 											<span><?php _e('Impressum', 'btoaudit'); ?></span>
 										</h2>
 										<div class="imprint-contents">
-											<div class="imprint-content-block">
+											<div class="imprint-content-block" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
 												<h6 class="imprint-contect-heading"><?php _e('Herausgeber', 'btoaudit'); ?></h6>
 												<p class="imprint-content-content"><?php the_sub_field('imprint-editor'); ?></p>
 											</div>
-											<div class="imprint-content-block">
+											<div class="imprint-content-block" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
 												<h6 class="imprint-contect-heading"><?php _e('Herausgeber', 'btoaudit'); ?></h6>
 												<p class="imprint-content-content"><?php the_sub_field('imprint-editor'); ?></p>
 											</div>
-											<div class="imprint-content-block">
+											<div class="imprint-content-block" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
 												<h6 class="imprint-contect-heading"><?php _e('Web Beratung, -Design & -Programmierung', 'btoaudit'); ?></h6>
 												<a class="p imprint-content-content text-decor-none" href="http://creationworx.com/" target="_blank"><?php _e('creationworx.ch', 'btoaudit'); ?></a>												
 											</div>											
@@ -288,7 +291,7 @@
 						    		<img class="full-width-image-img" src="<?php the_sub_field('full_width_image-img'); ?>" alt="full width image">
 						    	</div>
 						    <!-- /Full Width Image Block -->
-					        <?php elseif ( get_row_layout() == 'logo_block_layout' ): ?>
+					        <?php elseif ( get_row_layout() == 'logo_block_layout' ): $logo_count=-1; ?>
 					        <!-- Logo Block Layout Block -->
 						        <div class="custom-field-group logo-block-layout 
 	    						<?php
@@ -306,8 +309,8 @@
 									        	<?php // check if the nested repeater field has rows of data
 				    							if( have_rows('logo_block') ):
 				    								// loop through the rows of data
-						    						while ( have_rows('logo_block') ) : the_row(); ?>
-														<a class="logo-block-link flex-vert-c w-33" href="<?php the_sub_field('logo_block-link'); ?>" target="_blank">
+						    						while ( have_rows('logo_block') ) : the_row(); $logo_count++ ?>
+														<a class="logo-block-link flex-vert-c w-33" href="<?php the_sub_field('logo_block-link'); ?>" target="_blank" data-aos="fade" data-aos-delay="<?php echo (100 + $logo_count * 150) ?>" data-aos-duration="800">
 															<span class="logo-block-img-wrap inline-hor-c w-100">
 																<img class="logo-block-img inline-block" src="<?php the_sub_field('logo_block-img'); ?>" alt="logo image">
 															</span>

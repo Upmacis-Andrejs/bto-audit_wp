@@ -142,8 +142,8 @@ function btoaudit_scripts()
         wp_register_script('jquery', get_template_directory_uri() . '/bower_components/jquery/jquery.min.js', array(), '3.2.1', true); // jQuery
         wp_enqueue_script('jquery'); // Enqueue it!
 
-        wp_register_script('jquery-aniview', get_template_directory_uri() . '/bower_components/jquery-aniview/jquery.aniview.js', array('jquery'), '1.0.1', true); // jQuery-AniView
-        wp_enqueue_script('jquery-aniview'); // Enqueue it!        
+        wp_register_script('aos', get_template_directory_uri() . '/bower_components/aos/aos.js', array('jquery'), '2.2.0', true); // Animate On Scroll
+        wp_enqueue_script('aos'); // Enqueue it!        
 
         wp_register_script('btoauditscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
         wp_enqueue_script('btoauditscripts'); // Enqueue it!
@@ -165,8 +165,8 @@ function btoaudit_styles()
     wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!
 
-    wp_register_style('animate', get_template_directory_uri() . '/bower_components/animate.css/animate.min.css', array(), '3.5.2', 'all');
-    wp_enqueue_style('animate'); // Enqueue it!    
+    wp_register_style('aos', get_template_directory_uri() . '/bower_components/aos/aos.css', array(), '2.2.0', 'all');
+    wp_enqueue_style('aos'); // Enqueue it!        
 
     wp_register_style('btoaudit', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('btoaudit'); // Enqueue it!

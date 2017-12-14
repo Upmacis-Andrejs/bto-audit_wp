@@ -33,18 +33,19 @@
 			<header class="header z-99 clear" id="site-header" role="banner">
 				<div class="container flex h-100">
 					<div class="row">
-						<a class="float-left" id="nav-icon" href="#">
+						<a class="float-left" id="nav-icon" href="#" data-aos="fade-down" data-aos-delay="500" data-aos-duration="700">
 						  <span></span>
 						  <span></span>
 						  <span></span>
 						  <span></span>
 						</a>
-						<div class="header-logo float-right">
+						<div class="header-logo float-right" data-aos="fade-down" data-aos-delay="750" data-aos-duration="700">
 							<?php my_custom_logo(); ?>
 						</div>
 					</div>
 					<div class="row flex-ver-b nav-wrapper">
 						<!-- nav -->
+						<div class="visuallyhidden" id="preload-nav-bg-img"></div>
 						<nav class="nav hidden" role="navigation">
 							<?php btoaudit_nav(); ?>
 						</nav>
