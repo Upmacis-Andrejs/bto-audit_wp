@@ -177,6 +177,18 @@ h1, .h1 {
   line-height: 81px;
 }
 
+@media (max-width: 767px) {
+  h1, .h1 {  
+    font-size: calc(70px * 0.7);
+    line-height: calc(81px * 0.7);
+  }
+  h2, .h2 {  
+    font-size: calc(50px * 0.8);
+    line-height: calc(64px * 0.8);
+  }
+  h3, .h3 { font-size: calc(36px * 0.85); }
+}
+
 @font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?iurc1p');

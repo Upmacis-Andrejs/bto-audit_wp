@@ -46,7 +46,7 @@
 					<div class="row flex-vert-b nav-wrapper">
 						<!-- nav -->
 						<div class="visuallyhidden" id="preload-nav-bg-img"></div>
-						<nav class="nav hidden" role="navigation">
+						<nav class="nav hidden hyphenate" role="navigation">
 							<?php btoaudit_nav(); ?>
 						</nav>
 						<!-- /nav -->

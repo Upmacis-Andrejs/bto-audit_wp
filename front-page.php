@@ -58,7 +58,7 @@
 								<div class="container">
 									<div class="row">
 										<div class="flex-vert-b">
-											<div class="tbwb-text" data-aos="fade" data-aos-delay="200" data-aos-duration="400">
+											<div class="tbwb-text hyphenate" data-aos="fade" data-aos-delay="200" data-aos-duration="400">
 												<span class="triangle-cut">
 													<span class="triangle"></span>
 												</span>
@@ -91,29 +91,33 @@
 				    							if( have_rows('teammate') ):
 				    								// loop through the rows of data
 						    						while ( have_rows('teammate') ) : the_row(); ?>
-										       		<div class="teammate w-33 w-sm-100">
-										       			<div class="triangle-cut">
-										       				<div class="triangle"></div>
-										       			</div>
-										       			<div class="teammate-picture section-bg" style="background-image: url(<?php the_sub_field('teammate-picture'); ?>)">
-										       				<div class="teammate-connections row w-100">
-										       					<?php if( get_sub_field('teammate-linkedin') ): ?>
-										       						<a class="teammate-link teammate-linkedin icon-linkedin float-left text-decor-none" href="<?php the_sub_field('teammate-linkedin'); ?>" target="_blank"></a>
-										       					<?php endif; ?>
-										       					<?php if( get_sub_field('teammate-xing') ): ?>									       					
-										       						<a class="teammate-link teammate-xing icon-xing float-left text-decor-none" href="<?php the_sub_field('teammate-xing'); ?>" target="_blank"></a>
-										       					<?php endif; ?>
-										       					<?php if( get_sub_field('teammate-facebook') ): ?>									       						
-										       						<a class="teammate-link teammate-facebook icon-facebook float-left text-decor-none" href="<?php the_sub_field('teammate-facebook'); ?>" target="_blank"></a>
-										       					<?php endif; ?>
-										       					<?php if( get_sub_field('teammate-email') ): ?>									       						
-										       						<a class="teammate-link teammate-email icon-email float-right text-decor-none" href="mailto:<?php the_sub_field('teammate-email'); ?>"></a>
-										       					<?php else: ?>
-										       						<a class="teammate-link teammate-email icon-email float-right text-decor-none" href="#contact-form"></a>				
-										       					<?php endif; ?>
-										       				</div>
-										       			</div>
-										       			<div class="teammate-contents">
+										       		<div class="teammate row w-33 w-sm-100">
+										       			<div class="triangle-cut-wrapper w-100 float-left">
+											       			<div class="triangle-cut">
+											       				<div class="triangle"></div>
+											       			</div>
+											       		</div>
+										       			<div class="teammate-picture-wrapper w-100 float-left">
+											       			<div class="teammate-picture section-bg" style="background-image: url(<?php the_sub_field('teammate-picture'); ?>)">
+											       				<div class="teammate-connections row w-100">
+											       					<?php if( get_sub_field('teammate-linkedin') ): ?>
+											       						<a class="teammate-link teammate-linkedin icon-linkedin float-left text-decor-none" href="<?php the_sub_field('teammate-linkedin'); ?>" target="_blank"></a>
+											       					<?php endif; ?>
+											       					<?php if( get_sub_field('teammate-xing') ): ?>									       					
+											       						<a class="teammate-link teammate-xing icon-xing float-left text-decor-none" href="<?php the_sub_field('teammate-xing'); ?>" target="_blank"></a>
+											       					<?php endif; ?>
+											       					<?php if( get_sub_field('teammate-facebook') ): ?>									       						
+											       						<a class="teammate-link teammate-facebook icon-facebook float-left text-decor-none" href="<?php the_sub_field('teammate-facebook'); ?>" target="_blank"></a>
+											       					<?php endif; ?>
+											       					<?php if( get_sub_field('teammate-email') ): ?>									       						
+											       						<a class="teammate-link teammate-email icon-email float-right text-decor-none" href="mailto:<?php the_sub_field('teammate-email'); ?>"></a>
+											       					<?php else: ?>
+											       						<a class="teammate-link teammate-email icon-email float-right text-decor-none" href="#contact-form"></a>				
+											       					<?php endif; ?>
+											       				</div>
+											       			</div>
+											       		</div>
+										       			<div class="teammate-contents float-left">
 										       				<h3 class="teammate-name all-caps" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800"><?php the_sub_field('teammate-name'); ?></h3>
 										       				<p class="teammate-position" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800"><?php the_sub_field('teammate-position'); ?></p>
 										       				<p class="teammate-quotation" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" data-aos-offset="100">«<?php the_sub_field('teammate-quotation'); ?>»</p>
@@ -144,10 +148,10 @@
 						       				<div class="triangle"></div>
 						       			</div>
 										<div class="tb2c-column-wrapper flex-hor-c" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" data-aos-offset="200">
-									        <div class="tb2c-left tb2c-column w-50 w-sm-100">
+									        <div class="tb2c-left tb2c-column w-50 w-sm-100 hyphenate">
 									        	<?php the_sub_field('tb2c-left'); ?>
 									        </div>
-									        <div class="tb2c-right tb2c-column w-50 w-sm-100">
+									        <div class="tb2c-right tb2c-column w-50 w-sm-100 hyphenate">
 									        	<?php the_sub_field('tb2c-right'); ?>
 									        </div>
 									    </div>
@@ -173,7 +177,7 @@
 												<span class="triangle-cut">
 													<span class="triangle"></span>
 												</span>
-												<span><?php _e('Filialen', 'btoaudit'); ?></span>
+												<span class="hyphenate"><?php _e('Filialen', 'btoaudit'); ?></span>
 											</h2>
 											<div class="branch-office-wrapper flex-hor-c">
 				    							<?php if( have_rows('branch_office') ):
@@ -184,29 +188,33 @@
 						    							$address_1 = strtolower(str_replace(' ', '+', $address_1));
 						    							$address_2 = get_sub_field('bo-address_2');
 						    							$address_2 = strtolower(str_replace(' ', '+', $address_2)); ?>
-						    							<div class="branch-office w-33 w-sm-100">
-						    								<ul class="bo-address bo-list" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
-						    									<li class="bo-bo_name"><?php the_sub_field('bo-bo_name'); ?></li>
-						    									<li class="bo-address_1"><?php the_sub_field('bo-address_1'); ?></li>
-						    									<li class="bo-address_2"><?php the_sub_field('bo-address_2'); ?></li>
-						    								</ul>
-						    								<ul class="bo-contacts bo-list" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-						    									<li class="bo-phone">
-						    										<a class="text-decor-none" href="tel:<?php $phone = get_sub_field('bo-phone'); echo str_replace(' ', '', $phone); ?>">
-						    											<?php the_sub_field('bo-phone'); ?>
-						    										</a>
-						    									</li>
-						    									<li class="bo-email">
-						    										<a href="mailto:<?php the_sub_field('bo-email'); ?>"><?php the_sub_field('bo-email'); ?></a>
-						    									</li>
-						    								</ul>
-						    								<div class="google-maps" data-aos="fade" data-aos-delay="<?php echo (100 + $branch__offices_count * 200) ?>" data-aos-duration="800" data-aos-offset="150">
-						    									<iframe
-																  style="border:0"
-																  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAiWaHtquUedxU34km3yEKsaq4BkjrTmGs&q=<?php echo $address_1 . '+' . $address_2 ?>" allowfullscreen>
-																</iframe>
-						    								</div>
-						    								<a class="google-maps-directions" href="https://www.google.com/maps/dir/?api=1&destination=<?php echo $address_1 . '+' . $address_2 ?>" target="_blank" data-aos="fade" data-aos-delay="<?php echo (100 + $branch__offices_count * 150) ?>" data-aos-duration="800">>&nbsp;<?php _e('Routenplaner in Googlemaps öffnen', 'btoaudit'); ?></a>
+						    							<div class="branch-office row w-33 w-sm-100">
+						    								<div class="bo-list-wrapper float-left">
+							    								<ul class="bo-address bo-list" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+							    									<li class="bo-bo_name"><?php the_sub_field('bo-bo_name'); ?></li>
+							    									<li class="bo-address_1"><?php the_sub_field('bo-address_1'); ?></li>
+							    									<li class="bo-address_2"><?php the_sub_field('bo-address_2'); ?></li>
+							    								</ul>
+							    								<ul class="bo-contacts bo-list" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+							    									<li class="bo-phone">
+							    										<a class="text-decor-none" href="tel:<?php $phone = get_sub_field('bo-phone'); echo str_replace(' ', '', $phone); ?>">
+							    											<?php the_sub_field('bo-phone'); ?>
+							    										</a>
+							    									</li>
+							    									<li class="bo-email">
+							    										<a href="mailto:<?php the_sub_field('bo-email'); ?>"><?php the_sub_field('bo-email'); ?></a>
+							    									</li>
+							    								</ul>
+							    							</div>
+						    								<div class="google-maps-wrapper w-100 float-left">
+							    								<div class="google-maps" data-aos="fade" data-aos-delay="<?php echo (100 + $branch__offices_count * 200) ?>" data-aos-duration="800" data-aos-offset="150">
+							    									<iframe
+																	  style="border:0"
+																	  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAiWaHtquUedxU34km3yEKsaq4BkjrTmGs&q=<?php echo $address_1 . '+' . $address_2 ?>" allowfullscreen>
+																	</iframe>
+							    								</div>
+							    								<a class="google-maps-directions" href="https://www.google.com/maps/dir/?api=1&destination=<?php echo $address_1 . '+' . $address_2 ?>" target="_blank" data-aos="fade" data-aos-delay="<?php echo (100 + $branch__offices_count * 150) ?>" data-aos-duration="800">>&nbsp;<?php _e('Routenplaner in Googlemaps öffnen', 'btoaudit'); ?></a>
+							    							</div>
 						    							</div>
 					    							<?php endwhile; ?>
 					    						<?php endif; ?>	
@@ -233,7 +241,7 @@
 											<span class="triangle-cut">
 												<span class="triangle"></span>
 											</span>
-											<span><?php _e('Kontaktformular', 'btoaudit'); ?></span>
+											<span class="hyphenate"><?php _e('Kontaktformular', 'btoaudit'); ?></span>
 										</h2>
 										<div class="contact-form-wrapper" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1100" data-aos-offset="200">
 											<?php
@@ -263,7 +271,7 @@
 											<span class="triangle-cut">
 												<span class="triangle"></span>
 											</span>
-											<span><?php _e('Impressum', 'btoaudit'); ?></span>
+											<span class="hyphenate"><?php _e('Impressum', 'btoaudit'); ?></span>
 										</h2>
 										<div class="imprint-contents">
 											<div class="imprint-content-block" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
@@ -310,7 +318,7 @@
 				    							if( have_rows('logo_block') ):
 				    								// loop through the rows of data
 						    						while ( have_rows('logo_block') ) : the_row(); $logo_count++ ?>
-														<a class="logo-block-link flex-vert-c w-33" href="<?php the_sub_field('logo_block-link'); ?>" target="_blank" data-aos="fade" data-aos-delay="<?php echo (100 + $logo_count * 150) ?>" data-aos-duration="800">
+														<a class="logo-block-link flex-vert-c w-33 w-xxs-100" href="<?php the_sub_field('logo_block-link'); ?>" target="_blank" data-aos="fade" data-aos-delay="<?php echo (100 + $logo_count * 150) ?>" data-aos-duration="800">
 															<span class="logo-block-img-wrap inline-hor-c w-100">
 																<img class="logo-block-img inline-block" src="<?php the_sub_field('logo_block-img'); ?>" alt="logo image">
 															</span>

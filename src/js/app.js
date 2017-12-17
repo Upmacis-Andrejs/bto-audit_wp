@@ -3,7 +3,6 @@ $(document).ready(function() {
 
 	//toggle mobile menu
 	$("#nav-icon").click(function(event) {
-	    var click_target = $(event.target);
         var html_top = Math.abs(parseInt($('html').css('top'), 10));
 		if ( $(this).hasClass('open') ) {
 	        $("html").removeClass('no-scroll');
@@ -21,7 +20,6 @@ $(document).ready(function() {
 	$(".header-menu a").click(function() {
         $("html").removeClass('no-scroll');
         $("html").css("top",  '');
-        $(window).scrollTop( html_top );
 		$("#nav-icon").removeClass('open');
 		$("#site-header").removeClass('open');
 		$("#site-header .nav").addClass('hidden');
