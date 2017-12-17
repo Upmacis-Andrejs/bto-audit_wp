@@ -145,6 +145,9 @@ function btoaudit_scripts()
         wp_register_script('aos', get_template_directory_uri() . '/bower_components/aos/aos.js', array('jquery'), '2.2.0', true); // Animate On Scroll
         wp_enqueue_script('aos'); // Enqueue it!        
 
+        wp_register_script('headroom', get_template_directory_uri() . '/js/lib/headroom.min.js', array(), '0.9.3', true); // Headroom.js
+        wp_enqueue_script('headroom'); // Enqueue it!        
+
         wp_register_script('btoauditscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
         wp_enqueue_script('btoauditscripts'); // Enqueue it!
     }

@@ -2,13 +2,26 @@ $(document).ready(function() {
 	'use strict';
 
 	//toggle mobile menu
-	$("#nav-icon").click(function() {
+	$("#nav-icon").click(function(event) {
+	    var click_target = $(event.target);
+        var html_top = Math.abs(parseInt($('html').css('top'), 10));
+		if ( $(this).hasClass('open') ) {
+	        $("html").removeClass('no-scroll');
+	        $("html").css("top",  '');
+	        $(window).scrollTop( html_top );
+        } else {
+            $("html").css("top",  - $(window).scrollTop() );
+            $("html").addClass('no-scroll');                      
+        }
 		$(this).toggleClass('open');
 		$("#site-header").toggleClass('open');
 		$("#site-header .nav").toggleClass('hidden');
 		return false;
 	});
 	$(".header-menu a").click(function() {
+        $("html").removeClass('no-scroll');
+        $("html").css("top",  '');
+        $(window).scrollTop( html_top );
 		$("#nav-icon").removeClass('open');
 		$("#site-header").removeClass('open');
 		$("#site-header .nav").addClass('hidden');
@@ -18,48 +31,10 @@ $(document).ready(function() {
 	$(".header-menu a, .teammate-email, .btn").click(function() {
 		var $href = $(this).attr('href');
 	    $("html, body").animate({
-	        scrollTop: $($href).offset().top + 2
+	        scrollTop: $($href).offset().top + 1
 	    }, 500);
 	    return false;
 	});
-
-	//hide header when scrolling down, show when scrolling up
-		var didScroll;
-		var lastScrollTop = 0;
-		var delta = 5;
-		var navbarHeight = $('#site-header').outerHeight();
-		// on scroll, let the interval function know the user has scrolled
-		$(window).scroll(function(event){
-		  didScroll = true;
-		});
-		// run hasScrolled() and reset didScroll status
-		setInterval(function() {
-		  if (didScroll) {
-		    hasScrolled();
-		    didScroll = false;
-		  }
-		}, 250);
-		function hasScrolled() {
-		    var st = $(this).scrollTop();
-		    
-		    // Make sure they scroll more than delta
-		    if(Math.abs(lastScrollTop - st) <= delta)
-		        return;
-		    
-		    // If they scrolled down and are past the navbar, add class .nav-up.
-		    // This is necessary so you never see what is "behind" the navbar.
-		    if (st > lastScrollTop && st > navbarHeight){
-		        // Scroll Down
-		        $('#site-header').removeClass('nav-down').addClass('nav-up');
-		    } else {
-		        // Scroll Up
-		        if(st + $(window).height() < $(document).height()) {
-		            $('#site-header').removeClass('nav-up').addClass('nav-down');
-		        }
-		    }
-		    
-		    lastScrollTop = st;
-		}
 
 	//replace all .svg to .png, in case the browser does not support the format
 	if(!Modernizr.svg) {
@@ -67,16 +42,31 @@ $(document).ready(function() {
 	        return $(this).attr('src').replace('.svg', '.png');
 	    });
 	}
+
+	//hide site header when scrolling down
+		//define custom options
+	var $options = {
+			offset: 5,
+			tolerance: 5,
+		}
+		// grab an element
+		var myElement = document.querySelector(".headroom");
+		// construct an instance of Headroom, passing the element
+		var headroom  = new Headroom(myElement, $options);
+		// initialise
+		headroom.init();
+
 });
 
 window.onload = function() {
-	//add body class after elements have loaded
-	$("body").addClass('contect-loaded');
+	//add class to body element after page has loaded (including pictures)
+	$("body").addClass('content-loaded');
 
 	//animate elements
 	AOS.init({
 		easing: 'ease-in-out-quart',
-		offset: 0,
+		offset: 70,
+	    once: true
 	});
 }
 

@@ -2,7 +2,7 @@
 .section-title-block {
 	height: 72px;
 	color: #fff;
-	background-image: linear-gradient( 63deg, #08161f, #0d5b88 );
+	background-image: linear-gradient( 27deg, rgb(0,18,32), rgb(18,99,133) );
 }
 
 // Section Background
@@ -65,20 +65,21 @@
 // Text Block With Button Block
 .text-block-with-button {
 	padding-top: 75px;
-	padding-bottom: 120px;
+	padding-bottom: 105px;
 	.tbwb-text {
 		max-width: 685px;
 		margin-right: 60px;
-		h1 { margin-bottom: 55px; }
+		h1 { margin-bottom: 40px; }
 		.triangle-cut {
 			width: 86px;
 			height: 86px;
-			margin-bottom: 20px;
+			margin-bottom: 32px;
 			.triangle { background: #fff; }
 		}
 	}
 	.tbwb-button {
 		margin-top: 60px;
+		margin-bottom: 16px;
 		margin-left: auto;
 	}
 }
@@ -88,13 +89,12 @@
 
 // Text Block 2 Columns Block
 .text-block-2-columns {
-	padding-top: 70px;
-	padding-bottom: 30px;
+	padding-top: 68px;
 	color: #015B77;
 	.triangle-cut {
 		width: 77px;
 		height: 77px;
-		margin-bottom: 15px;
+		margin-bottom: 22px;
 		.triangle { background-image: linear-gradient( 342deg, rgb(0,18,32), rgb(18,99,133) ); }
 	}
 	.tb2c-column-wrapper {
@@ -108,6 +108,7 @@
 		padding-left: 63px;
 		margin-bottom: 50px;
 	}
+	.tb2c-right { margin-top: 5px; }
 }
 .text-block-2-columns.green-bg,
 .text-block-2-columns.gray-bg {
@@ -130,7 +131,7 @@
 
 // Teammate Bock
 .teammate-block {
-	padding-top: 70px;
+	padding-top: 68px;
 	padding-bottom: 80px;	
 	color: #a69e96;
 	.triangle-cut { margin-bottom: 28px; }
@@ -154,7 +155,7 @@
 			margin-bottom: 42px;
 		}
 		.teammate-name { margin-bottom: 15px; }
-		.teammate-position { margin-bottom: 60px; }
+		.teammate-position { margin-bottom: 55px; }
 		.teammate-connections {
 			position: absolute;
 			right: 0;
@@ -176,7 +177,7 @@
 			font-size: 20px;
 		}
 		.teammate-quotation {
-			@extend .Sari-Bold-Italic;
+			@extend .Sari-Medium-Italic;
 			letter-spacing: 0.03em;		
 			font-size: 20px;
 			line-height: 2.25;
@@ -209,10 +210,10 @@
 // Branch Offices Block
 .branch-offices {
 	color: #a69e96;
-	padding-top: 56px;
-	padding-bottom: 18px;
+	padding-top: 48px;
+	padding-bottom: 22px;
 	.title-triangle .triangle { background: #a69e96; }
-	.custom-field-group-title { margin-bottom: 56px; }
+	.custom-field-group-title { margin-bottom: 28px; }
 	.branch-office-wrapper {
 		width: calc(100% + 19px * 2);
 		margin-right: -19px;
@@ -225,13 +226,16 @@
 		.bo-list {
 			list-style-type: none;
 			li {
-				padding-top: 8px;
-				padding-bottom: 8px;
+				padding-top: 6px;
+				padding-bottom: 6px;
 			}
 		}
-		.bo-address { margin-bottom: 25px; }
-		.bo-contacts { margin-bottom: 56px; }		
-		.google-maps-directions { margin-top: 15px; }
+		.bo-address { margin-bottom: 36px; }
+		.bo-contacts { margin-bottom: 45px; }		
+		.google-maps-directions {
+			margin-top: 16px;
+			font-size: 16px;
+		}
 	}
 	.google-maps {
 		width: 100%;
@@ -250,15 +254,16 @@
 
 // Contact Form Block
 .contact-form {
-	padding-top: 73px;
-	padding-bottom: 105px;
-	.custom-field-group-title { margin-bottom: 40px; }
+	padding-top: 65px;
+	padding-bottom: 65px;
+	.custom-field-group-title { margin-bottom: 38px; }
 	.wpcf7 {
 		input,
 		textarea,
 		.wpcf7-not-valid-tip {
-			@extend .Sari-Regular-Italic;
-			font-size: 20px;			
+			@extend .Sari-Light-Italic;
+			font-size: 20px;
+			letter-spacing: 0.03em;		
 		}
 		.wpcf7-not-valid-tip {
 			margin-top: -10px;
@@ -269,8 +274,8 @@
 		textarea {
 			width: 100%;
 			height: 60px;
-			padding: 17px 34px;
-			margin-bottom: 15px;
+			padding: 17px 37px;
+			margin-bottom: 17px;
 			background: transparent;
 			border: 1px solid #fff;
 			border-radius: 6px;
@@ -280,6 +285,7 @@
 			@extend .btn-1;
 			padding-top: 0;
 			padding-bottom: 0;
+			font-size: 20px;
 		}
 		.g-recaptcha { margin-bottom: 15px; }
 		.wpcf7-response-output { display: none!important; }
@@ -292,11 +298,11 @@
 
 // Imprint Block
 .imprint {
-	padding-top: 48px;
-	padding-bottom: 50px;
+	padding-top: 40px;
+	padding-bottom: 45px;
 	color: #a69e96;
 	.title-triangle .triangle { background: #a69e96; }
-	.custom-field-group-title { margin-bottom: 50px; }
+	.custom-field-group-title { margin-bottom: 32px; }
 	.imprint-contect-heading {
 		font-size: 20px;
 		line-height: 1.5;
@@ -308,8 +314,8 @@
 
 // Logo Block Layout Block
 .logo-block-layout {
-	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-top: 74px;
+	padding-bottom: 74px;
 	.logo-block-link {
 		padding-right: 50px;
 		padding-left: 50px;

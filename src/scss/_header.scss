@@ -1,10 +1,20 @@
 
 // Site Header
 #site-header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
 	padding-top: 65px;
-	margin-bottom: -180px;
 	.container > .row { width: calc(100% + 30px); }
+	.header-logo {
+		margin-left: auto;
+		img { max-height: 115px; }
+	}
 }
+#site-header { visibility: hidden; }
+.content-loaded #site-header { visibility: visible; }
 #preload-nav-bg-img { background-image: url('img/team.jpg'); }
 #site-header.open {
 	position: fixed;
@@ -14,7 +24,7 @@
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	background-image: url('img/team.jpg');
+	background-image: url('img/team.jpg')!important;
 	@extend .section-bg;
 	background-position: 50% 0%;
 	background-blend-mode: multiply;
@@ -30,6 +40,29 @@
 	height: 100%;
 	background-image: linear-gradient( 27deg, rgb(0,18,32), rgb(18,99,133) );
 	opacity: 0.81;
+}
+
+// Site header hide when scrolling down
+#site-header.headroom--pinned,
+#site-header.headroom--unpinned,
+#site-header.headroom .header-logo > a,
+#site-header.headroom .header-logo img {
+    transition: 0.4s ease-in-out!important;
+    animation-delay: 0s!important;
+}
+#site-header.headroom--pinned { transform: translateY(0%); }
+#site-header.headroom--unpinned { transform: translateY(-100%); }
+#site-header.headroom--top { background-image: none; }
+#site-header.headroom--not-top {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-image: linear-gradient( 27deg, rgba(0,18,32,0.9), rgba(18,99,133,0.9) );
+	.header-logo > a {
+		height: 70px;
+		margin-top: -21.5px;
+		margin-bottom: -21.5px;
+		img { max-height: 70px; }
+	}
 }
 
 // Navigation Icon + Effects
@@ -66,9 +99,6 @@
 	span:nth-of-type(2) { transform: rotate(45deg); }
 	span:nth-of-type(3) { transform: rotate(-45deg); }
 }
-
-// Header Logo
-#site-header .header-logo { margin-left: auto; }
 
 // Header Menu
 #site-header .nav-wrapper { flex-grow: 1; }

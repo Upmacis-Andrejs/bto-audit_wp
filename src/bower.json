@@ -16,6 +16,7 @@
     "jquery": "^3.2.1",
     "animate.css": "^3.5.2",
     "jquery-aniview": "jjcosgrove/jquery-aniview#^1.0.2",
-    "aos": "^2.2.0"
+    "aos": "^2.2.0",
+    "headroom.js": "WickyNilliams/headroom.js#^0.9.4"
   }
 }

@@ -57,7 +57,7 @@
 							endif; ?>">
 								<div class="container">
 									<div class="row">
-										<div class="flex-ver-b">
+										<div class="flex-vert-b">
 											<div class="tbwb-text" data-aos="fade" data-aos-delay="200" data-aos-duration="400">
 												<span class="triangle-cut">
 													<span class="triangle"></span>
@@ -140,10 +140,10 @@
 							endif; ?>">
 								<div class="container">
 									<div class="row">
-										<div class="triangle-cut">
+										<div class="triangle-cut" data-aos="fade" data-aos-delay="100" data-aos-duration="600" data-aos-offset="120">
 						       				<div class="triangle"></div>
 						       			</div>
-										<div class="tb2c-column-wrapper flex-hor-c" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-offset="200">
+										<div class="tb2c-column-wrapper flex-hor-c" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" data-aos-offset="200">
 									        <div class="tb2c-left tb2c-column w-50 w-sm-100">
 									        	<?php the_sub_field('tb2c-left'); ?>
 									        </div>
@@ -200,7 +200,7 @@
 						    										<a href="mailto:<?php the_sub_field('bo-email'); ?>"><?php the_sub_field('bo-email'); ?></a>
 						    									</li>
 						    								</ul>
-						    								<div class="google-maps" data-aos="fade" data-aos-delay="<?php echo (100 + $branch__offices_count * 150) ?>" data-aos-duration="800" data-aos-offset="150">
+						    								<div class="google-maps" data-aos="fade" data-aos-delay="<?php echo (100 + $branch__offices_count * 200) ?>" data-aos-duration="800" data-aos-offset="150">
 						    									<iframe
 																  style="border:0"
 																  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAiWaHtquUedxU34km3yEKsaq4BkjrTmGs&q=<?php echo $address_1 . '+' . $address_2 ?>" allowfullscreen>
@@ -271,8 +271,8 @@
 												<p class="imprint-content-content"><?php the_sub_field('imprint-editor'); ?></p>
 											</div>
 											<div class="imprint-content-block" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-												<h6 class="imprint-contect-heading"><?php _e('Herausgeber', 'btoaudit'); ?></h6>
-												<p class="imprint-content-content"><?php the_sub_field('imprint-editor'); ?></p>
+												<h6 class="imprint-contect-heading"><?php _e('Inhaber', 'btoaudit'); ?></h6>
+												<p class="imprint-content-content"><?php the_sub_field('imprint-owner'); ?></p>
 											</div>
 											<div class="imprint-content-block" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
 												<h6 class="imprint-contect-heading"><?php _e('Web Beratung, -Design & -Programmierung', 'btoaudit'); ?></h6>

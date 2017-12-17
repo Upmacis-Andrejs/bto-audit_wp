@@ -252,12 +252,22 @@ select *:hover,
 .icon-bg {
   background-repeat: no-repeat;
   background-size: contain; 
-  background-position: center center;     
+  background-position: center center;    
 }
 .section-bg {
   background-repeat: no-repeat;
   background-size: cover!important; 
   background-position: center center;   
+}
+.icon-bg,
+.section-bg {
+  visibility: hidden;
+}
+.content-loaded {
+  .icon-bg,
+  .section-bg {
+    visibility: visible;
+  }  
 }
 
 // SIZES
@@ -301,14 +311,14 @@ select *:hover,
   display: flex;
   align-items: center;
 }
-.flex-ver-b {
+.flex-vert-b {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;   
 }
 .flex-hor-c {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   flex-wrap: wrap;
 }
 .flex-c-column {
@@ -394,7 +404,7 @@ img,
   max-height: 100%;
   visibility: hidden;
 }
-.contect-loaded {
+.content-loaded {
   img,
   .img { visibility: visible; }
 }
@@ -422,6 +432,13 @@ img,
 .start-1_15s { animation-delay: 0.75s; }
 .dur-0_4s { animation-duration: 0.4s; }
 .dur-0_5s { animation-duration: 0.5s; }
+
+// DISABLE SCROLLING PAGE
+.no-scroll {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%
+}
 
 // END OF GENERAL STYLES
 /* ---------------------------------------------------------------------------------------------------------------------------- */
