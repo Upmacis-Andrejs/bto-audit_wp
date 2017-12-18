@@ -332,7 +332,7 @@
 												       			</div>
 												       		</div>
 											       		<?php endif; ?>
-										       			<div class="tbwt-text float-left">
+										       			<div class="tbwt-text float-left" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
 										       				<?php the_sub_field('tbwt-text'); ?>
 										       			</div>
 										       		</div>

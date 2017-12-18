@@ -25,7 +25,45 @@
 
 	</head>
 	<body <?php body_class(); ?>>
-
+    <!--[if lte IE 9]>
+    <div id="update_browser_fake_body">
+        <div id="update_browser_container">
+            <div id="update_browser">
+                <div id="update_browser_inner">
+                    <h1>Lūdzu atjauniniet savu pārlūkprogrammu</h1>
+                    <p>Jūs izmantojat novecojušu interneta pārlūkprogrammas versiju, kura netiek tehniski atbalstīta. Tādējādi atsevišķas mājas lapas funkcijas nav pieejamas vai darbojas nekorekti. Izmantojot zemāk norādīto informāciju, lūdzam atjaunot vai izmantot citu interneta pārlūkprogrammas versiju.</p>
+                    <p>Bezmaksas interneta pārlūki - visi pārlūki veic tās pašas pamatfunkcijas un ir ērti lietojami.<br>
+                    Izvēlies, kuru pārlūku vēlies lejupielādēt:</p>
+                    <div id="browser_icon_wrap" class="clear">
+                        <a href="http://www.mozilla.org/en-US/firefox/new/" id="firefox" class="browser_link">
+                            <span class="browser_icon">&nbsp;</span>
+                            <span class="browser_name">Mozilla Firefox</span>
+                        </a>
+                        <a href="https://www.google.com/intl/en/chrome/browser/" id="chrome" class="browser_link">
+                            <span class="browser_icon">&nbsp;</span>
+                            <span class="browser_name">Google Chrome</span>
+                        </a>
+                        <a href="http://www.opera.com/" id="opera" class="browser_link">
+                            <span class="browser_icon">&nbsp;</span>
+                            <span class="browser_name">Opera</span>
+                        </a>
+                        <a href="https://safari.en.softonic.com/" id="safari" class="browser_link">
+                            <span class="browser_icon">&nbsp;</span>
+                            <span class="browser_name">Safari</span>
+                        </a>
+                        <a href="https://www.microsoft.com/en-us/windows/microsoft-edge" id="edge" class="browser_link">
+                            <span class="browser_icon">&nbsp;</span>
+                            <span class="browser_name">Microsoft Edge</span>
+                        </a>
+                    </div>
+                    <div id="close_announcement_wrap">
+                        <a href="#" id="close_announcement">Aizvērt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <![endif]-->
 		<!-- wrapper -->
 		<div class="wrapper" id="body-wrapper">
 

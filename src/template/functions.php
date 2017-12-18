@@ -6,13 +6,13 @@
  */
 
 /*------------------------------------*\
-	External Modules/Files
+    External Modules/Files
 \*------------------------------------*/
 
 // Load any external files you have here
 
 /*------------------------------------*\
-	Theme Support
+    Theme Support
 \*------------------------------------*/
 
 if (!isset($content_width))
@@ -38,25 +38,6 @@ if (function_exists('add_theme_support'))
         }
     }
 
-    // Add Support for Custom Backgrounds - Uncomment below if you're going to use
-    /*add_theme_support('custom-background', array(
-	'default-color' => 'FFF',
-	'default-image' => get_template_directory_uri() . '/img/bg.jpg'
-    ));*/
-
-    // Add Support for Custom Header - Uncomment below if you're going to use
-    /*add_theme_support('custom-header', array(
-	'default-image'			=> get_template_directory_uri() . '/img/headers/default.jpg',
-	'header-text'			=> false,
-	'default-text-color'		=> '000',
-	'width'				=> 1000,
-	'height'			=> 198,
-	'random-default'		=> false,
-	'wp-head-callback'		=> $wphead_cb,
-	'admin-head-callback'		=> $adminhead_cb,
-	'admin-preview-callback'	=> $adminpreview_cb
-    ));*/
-
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
 
@@ -65,19 +46,8 @@ if (function_exists('add_theme_support'))
 }
 
 /*------------------------------------*\
-	Functions
+    Functions
 \*------------------------------------*/
-
-// Add Advanced Custom Fields Options page
-//if( function_exists('acf_add_options_page') ) {
-//    acf_add_options_page(array(
-//        'page_title'    => 'Theme Options',
-//        'menu_title'    => 'Theme Options',
-//        'menu_slug'     => 'theme-options',
-//        'capability'    => 'edit_posts',
-//        'redirect'      => false
-//    ));
-//}
 
 // Remove Desired Menus from Admin Page
 function remove_menus() {  
@@ -101,15 +71,15 @@ add_action('admin_bar_menu','remove_admin_bar_nodes',999);
 
 // Remove Desired Customizer Panels
 function remove_customizer_panels() {     
-	global $wp_customize;
-	$wp_customize->remove_panel( 'widgets' ); 
+    global $wp_customize;
+    $wp_customize->remove_panel( 'widgets' ); 
 } 
 
 add_action( 'customize_register', 'remove_customizer_panels', 11 );
 
 // Move Yoast plugin SEO boxes to bottom of post/page admin area
 function yoast_to_bottom() {
-	return 'low';
+    return 'low';
 }
 add_filter( 'wpseo_metabox_prio', 'yoast_to_bottom' );
 
@@ -132,7 +102,7 @@ function btoaudit_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-    	wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
+        wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
         wp_enqueue_script('conditionizr'); // Enqueue it!
 
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
@@ -142,8 +112,11 @@ function btoaudit_scripts()
         wp_register_script('jquery', get_template_directory_uri() . '/bower_components/jquery/jquery.min.js', array(), '3.2.1', true); // jQuery
         wp_enqueue_script('jquery'); // Enqueue it!
 
-        wp_register_script('jquery-aniview', get_template_directory_uri() . '/bower_components/jquery-aniview/jquery.aniview.js', array('jquery'), '1.0.1', true); // jQuery-AniView
-        wp_enqueue_script('jquery-aniview'); // Enqueue it!        
+        wp_register_script('aos', get_template_directory_uri() . '/bower_components/aos/aos.js', array('jquery'), '2.2.0', true); // Animate On Scroll
+        wp_enqueue_script('aos'); // Enqueue it!        
+
+        wp_register_script('headroom', get_template_directory_uri() . '/js/lib/headroom.min.js', array(), '0.9.3', true); // Headroom.js
+        wp_enqueue_script('headroom'); // Enqueue it!        
 
         wp_register_script('btoauditscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
         wp_enqueue_script('btoauditscripts'); // Enqueue it!
@@ -165,8 +138,8 @@ function btoaudit_styles()
     wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!
 
-    wp_register_style('animate', get_template_directory_uri() . '/bower_components/animate.css/animate.min.css', array(), '3.5.2', 'all');
-    wp_enqueue_style('animate'); // Enqueue it!    
+    wp_register_style('aos', get_template_directory_uri() . '/bower_components/aos/aos.css', array(), '2.2.0', 'all');
+    wp_enqueue_style('aos'); // Enqueue it!        
 
     wp_register_style('btoaudit', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('btoaudit'); // Enqueue it!
@@ -236,17 +209,6 @@ if (function_exists('register_sidebar'))
         'name' => __('Widget Area 1', 'btoaudit'),
         'description' => __('Description for this widget-area...', 'btoaudit'),
         'id' => 'widget-area-1',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-
-    // Define Sidebar Widget Area 2
-    register_sidebar(array(
-        'name' => __('Widget Area 2', 'btoaudit'),
-        'description' => __('Description for this widget-area...', 'btoaudit'),
-        'id' => 'widget-area-2',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
@@ -353,49 +315,49 @@ function enable_threaded_comments()
 // Custom Comments Callback
 function btoauditcomments($comment, $args, $depth)
 {
-	$GLOBALS['comment'] = $comment;
-	extract($args, EXTR_SKIP);
+    $GLOBALS['comment'] = $comment;
+    extract($args, EXTR_SKIP);
 
-	if ( 'div' == $args['style'] ) {
-		$tag = 'div';
-		$add_below = 'comment';
-	} else {
-		$tag = 'li';
-		$add_below = 'div-comment';
-	}
+    if ( 'div' == $args['style'] ) {
+        $tag = 'div';
+        $add_below = 'comment';
+    } else {
+        $tag = 'li';
+        $add_below = 'div-comment';
+    }
 ?>
     <!-- heads up: starting < for the html tag (li or div) in the next line: -->
     <<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
-	<?php if ( 'div' != $args['style'] ) : ?>
-	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
-	<?php endif; ?>
-	<div class="comment-author vcard">
-	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['180'] ); ?>
-	<?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
-	</div>
+    <?php if ( 'div' != $args['style'] ) : ?>
+    <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+    <?php endif; ?>
+    <div class="comment-author vcard">
+    <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['180'] ); ?>
+    <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
+    </div>
 <?php if ($comment->comment_approved == '0') : ?>
-	<em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
-	<br />
+    <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
+    <br />
 <?php endif; ?>
 
-	<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
-		<?php
-			printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
-		?>
-	</div>
+    <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
+        <?php
+            printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
+        ?>
+    </div>
 
-	<?php comment_text() ?>
+    <?php comment_text() ?>
 
-	<div class="reply">
-	<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-	</div>
-	<?php if ( 'div' != $args['style'] ) : ?>
-	</div>
-	<?php endif; ?>
+    <div class="reply">
+    <?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+    </div>
+    <?php if ( 'div' != $args['style'] ) : ?>
+    </div>
+    <?php endif; ?>
 <?php }
 
 /*------------------------------------*\
-	Actions + Filters + ShortCodes
+    Actions + Filters + ShortCodes
 \*------------------------------------*/
 
 // Add Actions
@@ -451,7 +413,7 @@ add_shortcode('btoaudit_shortcode_demo_2', 'btoaudit_shortcode_demo_2'); // Plac
 
 
 /*------------------------------------*\
-	ShortCode Functions
+    ShortCode Functions
 \*------------------------------------*/
 
 // Shortcode Demo with Nested Capability

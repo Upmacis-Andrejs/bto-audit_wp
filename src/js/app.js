@@ -34,6 +34,14 @@ $(document).ready(function() {
 	    return false;
 	});
 
+    //script for deprecated browser notification
+    $(document).ready(function() {
+        $('#close_announcement').click(function(e) {
+            e.preventDefault();
+            $('#update_browser_container').addClass('hidden');
+        });
+    });
+
 	//replace all .svg to .png, in case the browser does not support the format
 	if(!Modernizr.svg) {
 	    $('img[src*="svg"]').attr('src', function() {
