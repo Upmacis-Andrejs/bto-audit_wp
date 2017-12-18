@@ -290,13 +290,87 @@
 								    </div>
 								</div>
 							</div>
-							<!-- /Imprint Block -->							
+							<!-- /Imprint Block -->
+					        <?php elseif ( get_row_layout() == 'text_block_with_tile' ): ?>							
+							<!-- Text Block With Tile -->				        	
+	    						<div class="custom-field-group text-block-with-tile 
+	    						<?php
+    							echo 'custom-field-group-' . $customFieldGroupNumber . ' ';
+    							if( get_sub_field('tbwt-bg_color') == 'green' ): 
+									echo 'green-bg ';
+								elseif ( get_sub_field('tbwt-bg_color') == 'gray' ): 
+									echo 'gray-bg ';
+								else :
+									echo 'no-bg ';
+								endif;
+    							if( get_sub_field('tbwt-columns') == 'one' ): 
+									echo 'columns-one';
+								elseif ( get_sub_field('tbwt-columns') == 'two' ): 
+									echo 'columns-two';
+								elseif ( get_sub_field('tbwt-columns') == 'three' ): 
+									echo 'columns-three';
+								else :
+									echo 'columns-three';
+								endif;
+								 ?>">
+									<div class="container">
+										<div class="row">
+											<div class="tbwt-wrapper flex-hor-c">				        	
+									        	<?php // check if the nested repeater field has rows of data
+				    							if( have_rows('tbwt-contents') ):
+				    								// loop through the rows of data
+						    						while ( have_rows('tbwt-contents') ) : the_row(); ?>
+										       		<div class="tbwt-contents row">
+										       			<div class="triangle-cut-wrapper w-100 float-left">
+											       			<div class="triangle-cut">
+											       				<div class="triangle"></div>
+											       			</div>
+											       		</div>
+										       			<?php if ( get_sub_field('tbwt-pic') ): ?>
+											       			<div class="tbwt-pic-wrapper w-100 float-left">
+												       			<div class="tbwt-pic section-bg" style="background-image: url(<?php the_sub_field('tbwt-pic'); ?>)">
+												       			</div>
+												       		</div>
+											       		<?php endif; ?>
+										       			<div class="tbwt-text float-left">
+										       				<?php the_sub_field('tbwt-text'); ?>
+										       			</div>
+										       		</div>
+										       		<?php endwhile;
+										       	endif; ?>
+										    </div>
+									    </div>
+								    </div>
+								</div>
+		    				<!-- /Text Block With Tile -->
+		    				<?php elseif ( get_row_layout() == 'button_block' ): ?>
+		    				<!-- Button Block -->
+		    				<div class="custom-field-group button-block 
+    						<?php
+    						echo 'custom-field-group-' . $customFieldGroupNumber . ' ';
+    						if( get_sub_field('button_block-bg_color') == 'green' ): 
+								echo 'green-bg';
+							elseif ( get_sub_field('button_block-bg_color') == 'gray' ): 
+								echo 'gray-bg';
+							else :
+								echo 'no-bg';
+							endif; ?>">
+								<div class="container">
+									<div class="row">
+										<a class="button_block-btn btn btn-1 float-right" href="<?php the_sub_field('button_block-btn_link'); ?>" target="_blank" data-aos="fade" data-aos-delay="100" data-aos-duration="800">
+											<?php the_sub_field('button_block-btn_txt'); ?>
+										</a>
+								    </div>
+								</div>
+							</div>
+							<!-- /Button Block -->							
+
 				    		<?php elseif ( get_row_layout() == 'full_width_image' ): ?>
 				    		<!-- Full Width Image Block -->		    			
 						    	<div class="custom-field-group full-width-image
 						    	<?php
     							echo 'custom-field-group-' . $customFieldGroupNumber . ' '; ?>">
-						    		<img class="full-width-image-img" src="<?php the_sub_field('full_width_image-img'); ?>" alt="full width image">
+						    		<img class="full-width-image-img" src="<?php the_sub_field('full_width_image-img'); ?>">
 						    	</div>
 						    <!-- /Full Width Image Block -->
 					        <?php elseif ( get_row_layout() == 'logo_block_layout' ): $logo_count=-1; ?>
@@ -320,7 +394,7 @@
 						    						while ( have_rows('logo_block') ) : the_row(); $logo_count++ ?>
 														<a class="logo-block-link flex-vert-c w-33 w-xxs-100" href="<?php the_sub_field('logo_block-link'); ?>" target="_blank" data-aos="fade" data-aos-delay="<?php echo (100 + $logo_count * 150) ?>" data-aos-duration="800">
 															<span class="logo-block-img-wrap inline-hor-c w-100">
-																<img class="logo-block-img inline-block" src="<?php the_sub_field('logo_block-img'); ?>" alt="logo image">
+																<img class="logo-block-img inline-block" src="<?php the_sub_field('logo_block-img'); ?>">
 															</span>
 														</a>
 										    		<?php endwhile;
