@@ -372,13 +372,19 @@
 			@extend .btn-1;
 			padding-top: 0;
 			padding-bottom: 0;
-			font-size: 20px;
+		}
+		input[type="submit"],
+		input[type="submit"]:hover,
+		input[type="submit"]:active,
+		input[type="submit"]:visited,
+		input[type="submit"]:focus {
+			font-size: 20px;			
 		}
 		.g-recaptcha { margin-bottom: 15px; }
 		.wpcf7-response-output { display: none!important; }
 		.contact-form .wpcf7 .wpcf7-not-valid-tip {
 			font-size: 16px;
-			margin-bottom: 5px; //?? nestrādā
+			margin-bottom: 5px;
 		}		
 	}
 }
@@ -472,6 +478,12 @@
 .button-block {
 	padding-top: 50px;
 	padding-bottom: 50px;
+	.button_block-btn:hover,
+	.button_block-btn:active,
+	.button_block-btn:focus,
+	.button_block-btn:visited {
+		color: #fff!important;
+	}
 }
 
 // Logo Block Layout Block

@@ -166,6 +166,7 @@ body {
   font-kerning: auto;
   overflow-x: hidden;
   line-height: 1.2;
+  margin: 0!important;
 }
 #body-wrapper {
   display: flex;
@@ -193,7 +194,9 @@ body {
 select:hover,
 select *:hover,
 .arrow:hover,
-.arrow *:hover {
+.arrow *:hover,
+.btn,
+input[type="submit"]:hover {
   cursor: pointer!important;
 }
 
@@ -546,15 +549,15 @@ img,
     font-size: 16px;
     color: #808080;
 }
-#firefox .browser_icon { background-image: url('images/firefox.png'); }
+#firefox .browser_icon { background-image: url('img/firefox.png'); }
 #chrome .browser_icon {
-    background-image: url('images/chrome.png');
+    background-image: url('img/chrome.png');
     background-size: 110px 110px;
 }
-#opera .browser_icon { background-image: url('images/opera.png'); }
-#safari .browser_icon { background-image: url('images/safari.png'); }
+#opera .browser_icon { background-image: url('img/opera.png'); }
+#safari .browser_icon { background-image: url('img/safari.png'); }
 #edge .browser_icon {
-    background-image: url('images/edge.png');
+    background-image: url('img/edge.png');
     background-size: 85px 85px;
     left: -8px;
     bottom: -4px;
