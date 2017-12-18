@@ -30,10 +30,9 @@
         <div id="update_browser_container">
             <div id="update_browser">
                 <div id="update_browser_inner">
-                    <h1>Lūdzu atjauniniet savu pārlūkprogrammu</h1>
-                    <p>Jūs izmantojat novecojušu interneta pārlūkprogrammas versiju, kura netiek tehniski atbalstīta. Tādējādi atsevišķas mājas lapas funkcijas nav pieejamas vai darbojas nekorekti. Izmantojot zemāk norādīto informāciju, lūdzam atjaunot vai izmantot citu interneta pārlūkprogrammas versiju.</p>
-                    <p>Bezmaksas interneta pārlūki - visi pārlūki veic tās pašas pamatfunkcijas un ir ērti lietojami.<br>
-                    Izvēlies, kuru pārlūku vēlies lejupielādēt:</p>
+                    <h1>Please update your browser!</h1>
+                    <p>You are using old browser version, which is not technically supported. That way some functions maybe are not available or aren't working right. Using information below please update or use another browser. </p>
+                    <p>Free browsers - all browsers provide the same base functions and are easy to use. Choose which browser do you want to download:</p>
                     <div id="browser_icon_wrap" class="clear">
                         <a href="http://www.mozilla.org/en-US/firefox/new/" id="firefox" class="browser_link">
                             <span class="browser_icon">&nbsp;</span>
